@@ -252,6 +252,9 @@ function Post(props) {
             thumb {
               id
               gatsbyImageData(width: 500, height: 300)
+              file {
+                url
+              }
             }
             tag
           }
@@ -265,7 +268,11 @@ function Post(props) {
 
   return (
     <>
-      <Seo title={node.title} />
+      <Seo
+        title={node.title}
+        card={`summary_large_image`}
+        image={`https:` + node.thumb.file.url}
+      />
       <div
         style={{
           margin: isMobile ? "0 5%" : "0 10%",
