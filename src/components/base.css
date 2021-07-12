@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;500;700&family=Noto+Serif+JP:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+body {
+  background-color: #e8ebf0;
+}
+
+h1 {
+  font-size: 300%;
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 200%;
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+}
+
+h3,
+h4,
+p {
+  font-family: "Noto Sans JP";
+  font-weight: 300;
+}
+
+.spacing {
+  letter-spacing: 0.05rem;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  font-family: "Noto Sans JP";
+  font-weight: 300;
+  text-decoration: none;
+  opacity: 1;
+  transition: 200ms;
+  color: black;
+}
+
+a:hover {
+  font-family: "Noto Sans JP";
+  font-weight: 300;
+  text-decoration: none;
+  opacity: 0.5;
+  color: black;
+}
+
+.post-link {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.post-link:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .post-link {
+    transition: none;
+  }
+  .post-link:hover {
+    opacity: 1;
+  }
+
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    transition: none;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+}
