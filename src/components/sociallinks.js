@@ -16,7 +16,7 @@ function SocialLinks({ color, marginLeft, fontWeight }) {
       }}
     >
       <a
-        href="https://twitter.com/asta18425"
+        href="https://twitter.com/yknsdt"
         target="_blank"
         rel="noopener noreferrer"
         style={aStyle}
