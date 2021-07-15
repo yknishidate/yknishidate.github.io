@@ -36,7 +36,7 @@ function Hero(props) {
 
       <div
         style={{
-          margin: "0 10%",
+          margin: "0 5%",
         }}
       >
         <Resume />
@@ -44,7 +44,7 @@ function Hero(props) {
           style={{
             position: "absolute",
             bottom: "5%",
-            right: "10%",
+            right: "5%",
           }}
         >
           <SocialLinks marginLeft={"1rem"} color={"white"} />

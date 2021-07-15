@@ -15,11 +15,11 @@ function Header() {
     <header
       style={{
         width: "100%",
-        height: isMobile ? "4rem" : "6rem",
+        height: "4rem",
         position: "fixed",
         top: "0",
         left: "0",
-        padding: isMobile ? "0 5%" : "0 10%",
+        padding: "0 5%",
         zIndex: "1",
         backgroundColor: "#e8ebf0",
         boxShadow: "0 0 4px #888",
@@ -223,7 +223,6 @@ function RelatedPosts({ nodes, node }) {
 }
 
 function Post(props) {
-  const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
   const postId = props.pageContext.contentful_id
   const prevPostId = props.pageContext.prevPostId
   const nextPostId = props.pageContext.nextPostId
@@ -275,7 +274,7 @@ function Post(props) {
       />
       <div
         style={{
-          margin: isMobile ? "0 5%" : "0 10%",
+          margin: "0 5%",
         }}
       >
         <Header />
@@ -287,7 +286,7 @@ function Post(props) {
         >
           <div
             style={{
-              marginTop: isMobile ? "6rem" : "10rem",
+              marginTop: "6rem",
               position: "relative",
             }}
           >

@@ -3,10 +3,8 @@ import "./base.css"
 import { useStaticQuery, graphql } from "gatsby"
 import PostLink from "./postlink"
 import TagList from "./taglist"
-import { useMediaQuery } from "react-responsive"
 
 function Posts(props) {
-  const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
   const data = useStaticQuery(
     graphql`
       query {
@@ -104,7 +102,7 @@ function Posts(props) {
   return (
     <div
       style={{
-        margin: isMobile ? "0 5%" : "0 10%",
+        margin: "0 5%",
         marginTop: "5rem",
       }}
     >
