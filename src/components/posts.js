@@ -3,6 +3,7 @@ import "./base.css"
 import { useStaticQuery, graphql } from "gatsby"
 import PostLink from "./postlink"
 import TagList from "./taglist"
+import ContentWrapper from "./contentwrapper"
 
 function Posts(props) {
   const data = useStaticQuery(
@@ -100,9 +101,8 @@ function Posts(props) {
   }
 
   return (
-    <div
+    <ContentWrapper
       style={{
-        margin: "0 5%",
         marginTop: "5rem",
       }}
     >
@@ -140,7 +140,7 @@ function Posts(props) {
           })}
         </main>
       </div>
-    </div>
+    </ContentWrapper>
   )
 }
 

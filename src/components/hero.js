@@ -4,6 +4,24 @@ import SocialLinks from "./sociallinks"
 import "./base.css"
 import Fade from "react-reveal/Fade"
 import { useMediaQuery } from "react-responsive"
+import ContentWrapper from "./contentwrapper"
+
+function BackImage() {
+  return (
+    <Fade delay={750} duration={750}>
+      <img
+        src={bg}
+        alt=""
+        style={{
+          width: "100%",
+          height: "100vh",
+          objectFit: "cover",
+          position: "absolute",
+        }}
+      ></img>
+    </Fade>
+  )
+}
 
 function Hero(props) {
   return (
@@ -21,24 +39,8 @@ function Hero(props) {
         backgroundColor: "#1F2937",
       }}
     >
-      <Fade delay={750} duration={750}>
-        <img
-          src={bg}
-          alt=""
-          style={{
-            width: "100%",
-            height: "100vh",
-            objectFit: "cover",
-            position: "absolute",
-          }}
-        ></img>
-      </Fade>
-
-      <div
-        style={{
-          margin: "0 5%",
-        }}
-      >
+      <BackImage />
+      <ContentWrapper>
         <Resume />
         <div
           style={{
@@ -49,7 +51,7 @@ function Hero(props) {
         >
           <SocialLinks marginLeft={"1rem"} color={"white"} />
         </div>
-      </div>
+      </ContentWrapper>
     </div>
   )
 }

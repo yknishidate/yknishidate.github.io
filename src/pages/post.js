@@ -8,6 +8,7 @@ import Footer from "../components/footer"
 import PostLink from "../components/postlink"
 import Seo from "../components/seo"
 import { useMediaQuery } from "react-responsive"
+import ContentWrapper from "../components/contentwrapper"
 
 function Header() {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
@@ -19,13 +20,12 @@ function Header() {
         position: "fixed",
         top: "0",
         left: "0",
-        padding: "0 5%",
         zIndex: "1",
         backgroundColor: "#e8ebf0",
-        boxShadow: "0 0 4px #888",
+        boxShadow: "0 0 2px #888",
       }}
     >
-      <div
+      <ContentWrapper
         style={{
           height: "100%",
           display: "flex",
@@ -49,7 +49,7 @@ function Header() {
           marginLeft={isMobile ? "1rem" : "4rem"}
           fontWeight={"500"}
         />
-      </div>
+      </ContentWrapper>
     </header>
   )
 }
@@ -272,11 +272,7 @@ function Post(props) {
         card={`summary_large_image`}
         image={`https:` + node.thumb.file.url}
       />
-      <div
-        style={{
-          margin: "0 5%",
-        }}
-      >
+      <ContentWrapper>
         <Header />
         <div
           style={{
@@ -302,7 +298,7 @@ function Post(props) {
           </div>
         </div>
         <Footer />
-      </div>
+      </ContentWrapper>
     </>
   )
 }
