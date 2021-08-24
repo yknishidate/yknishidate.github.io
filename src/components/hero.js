@@ -8,7 +8,7 @@ import ContentWrapper from "./contentwrapper"
 
 function BackImage() {
   return (
-    <Fade delay={750} duration={750}>
+    // <Fade delay={750} duration={750}>
       <img
         src={bg}
         alt=""
@@ -19,7 +19,7 @@ function BackImage() {
           position: "absolute",
         }}
       ></img>
-    </Fade>
+    // </Fade>
   )
 }
 
@@ -59,7 +59,7 @@ function Hero(props) {
 function Resume(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
   return (
-    <Fade cascade right duration={750} delay={750} distance="30px">
+    // <Fade cascade right duration={750} delay={750} distance="30px">
       <div style={{ color: "white" }}>
         <div
           style={{
@@ -97,7 +97,7 @@ function Resume(props) {
           </div>
         )}
       </div>
-    </Fade>
+    // </Fade>
   )
 }
 
