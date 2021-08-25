@@ -1,6 +1,5 @@
 import * as React from "react"
 import "./base.css"
-import { useMediaQuery } from "react-responsive"
 
 function ContentWrapper(props) {
   return (

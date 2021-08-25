@@ -16,7 +16,7 @@ function BackImage() {
           height: "100vh",
           objectFit: "cover",
           position: "absolute",
-          userSelect: "none"
+          pointerEvents: "none"
         }}
       ></img>
   )
@@ -70,8 +70,9 @@ function Resume(props) {
             columnGap: "1rem",
           }}
         >
-          <h1 style={{}}>西舘祐樹</h1>
-          <h2 style={{ color: "#486082" }}>Yuki Nishidate</h2>
+          {/* <h1 style={{}}>西舘祐樹</h1> */}
+          <h1 >西舘祐樹 | Yuki Nishidate</h1>
+          {/* <h2 style={{ color: "#486082" }}>Yuki Nishidate</h2> */}
         </div>
         <p>コンピュータグラフィックスが好きな大学生です。</p>
         {!isMobile && (

@@ -38,6 +38,13 @@ button {
   background: #999;
 }
 
+::selection {
+  background: #F09B50;
+}
+::-moz-selection {
+  background: #F09B50;
+}
+
 body {
   background-color: #e8ebf0;
 }
