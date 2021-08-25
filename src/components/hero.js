@@ -8,7 +8,6 @@ import ContentWrapper from "./contentwrapper"
 
 function BackImage() {
   return (
-    // <Fade delay={750} duration={750}>
       <img
         src={bg}
         alt=""
@@ -17,49 +16,49 @@ function BackImage() {
           height: "100vh",
           objectFit: "cover",
           position: "absolute",
+          userSelect: "none"
         }}
       ></img>
-    // </Fade>
   )
 }
 
 function Hero(props) {
   return (
-    <div
-      style={{
-        margin: "0",
-        padding: "0",
-        height: "100vh",
-        textAlign: "bottom",
-        verticalAlign: "bottom",
+      <div
+        style={{
+          margin: "0",
+          padding: "0",
+          height: "100vh",
+          textAlign: "bottom",
+          verticalAlign: "bottom",
 
-        display: "flex",
-        alignItems: "center",
-        zIndex: "-1",
-        backgroundColor: "#1F2937",
-      }}
-    >
-      <BackImage />
-      <ContentWrapper>
-        <Resume />
-        <div
-          style={{
-            position: "absolute",
-            bottom: "5%",
-            right: "5%",
-          }}
-        >
-          <SocialLinks marginLeft={"1rem"} color={"white"} />
-        </div>
-      </ContentWrapper>
-    </div>
+          display: "flex",
+          alignItems: "center",
+          zIndex: "-1",
+          backgroundColor: "#1F2937",
+        }}
+      >
+        <BackImage />
+        <ContentWrapper>
+          <Resume />
+          <div
+            style={{
+              position: "absolute",
+              bottom: "5%",
+              right: "10%",
+            }}
+          >
+            <SocialLinks marginLeft={"1rem"} color={"white"} />
+          </div>
+        </ContentWrapper>
+      </div>
   )
 }
 
 function Resume(props) {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
   return (
-    // <Fade cascade right duration={750} delay={750} distance="30px">
+    <Fade cascade right duration={500} delay={750} distance="30px">
       <div style={{ color: "white" }}>
         <div
           style={{
@@ -97,7 +96,7 @@ function Resume(props) {
           </div>
         )}
       </div>
-    // </Fade>
+    </Fade>
   )
 }
 

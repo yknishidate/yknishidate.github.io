@@ -7,7 +7,7 @@ function ContentWrapper(props) {
     <div
       style={Object.assign(
         {
-          margin: "0 5%",
+          margin: "0 10%",
         },
         props.style
       )}
