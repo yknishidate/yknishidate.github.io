@@ -9,6 +9,7 @@ import PostLink from "../components/postlink"
 import Seo from "../components/seo"
 import { useMediaQuery } from "react-responsive"
 import ContentWrapper from "../components/contentwrapper"
+import logo from "../images/N_round.svg"
 
 function Header() {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" })
@@ -34,15 +35,15 @@ function Header() {
         }}
       >
         <Link to="/">
-          <h2
+          <img
+            src={logo}
+            alt=""
             style={{
-              fontFamily: "Sigmar One",
-              fontStyle: "italic",
-              color: "#1F2937",
+              height: "30px",
+              margin: "auto",
+              verticalAlign: "middle"
             }}
-          >
-            N
-          </h2>
+          ></img>
         </Link>
         <SocialLinks
           color={"black"}
