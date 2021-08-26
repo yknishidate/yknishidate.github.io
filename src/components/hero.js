@@ -67,7 +67,7 @@ function Resume(props) {
         }}
       >
         <h1>西舘祐樹</h1>
-        <h2 style={{ color: "#7298CE" }}>Yuki Nishidate</h2>
+        <h2 style={{ color: "#475D80" }}>Yuki Nishidate</h2>
       </div>
       <p>コンピュータグラフィックスが好きな大学生です。</p>
       {!isMobile && (
