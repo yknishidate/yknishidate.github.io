@@ -218,6 +218,8 @@ function RelatedPosts({ nodes, node }) {
             isRelated(thisTags, targetTags) && <PostLink node={targetNode} />
           )
         })}
+        <PostLink />
+        <PostLink />
       </div>
     </div>
   )
