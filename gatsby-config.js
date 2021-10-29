@@ -46,5 +46,6 @@ module.exports = {
         showSpinner: false,
       },
     },
+    "@chakra-ui/gatsby-plugin",
   ],
 }
