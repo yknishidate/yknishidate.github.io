@@ -20,26 +20,8 @@ import "@fontsource/noto-sans-jp"
 import theme from "./theme"
 
 import { SiZenn, SiGithub, SiTwitter } from "react-icons/si"
-
-const Header = () => {
-  return (
-    <Flex mb={16}>
-      <Link to="/">
-        <Heading size="md">Nishiki</Heading>
-      </Link>
-
-      <Spacer />
-
-      <Box mx={4}>
-        <Link to="/about">About</Link>
-      </Box>
-
-      <Box>
-        <Link to="/posts">Posts</Link>
-      </Box>
-    </Flex>
-  )
-}
+import Header from "../components/header"
+import Layout from "../components/layout"
 
 const SocialLink = ({ to, icon, name }) => {
   return (
@@ -54,7 +36,7 @@ const SocialLink = ({ to, icon, name }) => {
       <Button
         p={0}
         variant="ghost"
-        colorScheme={"orange"}
+        colorScheme={"blue"}
         leftIcon={<Icon as={icon} />}
       >
         {name}
@@ -65,72 +47,56 @@ const SocialLink = ({ to, icon, name }) => {
 
 const Home = () => {
   return (
-    <ChakraProvider theme={theme}>
-      <Container maxW={"container.sm"} py={4}>
-        <Header />
-
-        <Flex align={"center"} mb={8}>
-          <Box>
-            <Heading mb={4}>Yuki Nishidate</Heading>
-            <Text mb={2}>🎓 慶應義塾大学 情報工学科 4 年</Text>
-            <Text mb={2}>💻 コンピュータグラフィックスを勉強中です</Text>
-          </Box>
-          <Spacer />
-          <StaticImage
-            src={"../images/favicon.png"}
-            alt="logo"
-            layout="fixed"
-            width={100}
-            height={100}
-            placeholder="none"
-          />
-        </Flex>
-
-        <Box mb={8}>
-          <Heading size="md" mb={4}>
-            Social
-          </Heading>
-
-          <List>
-            <ListItem>
-              <SocialLink
-                to="https://twitter.com/yknsdt/"
-                icon={SiTwitter}
-                name={"Twitter"}
-              />
-            </ListItem>
-
-            <ListItem>
-              <SocialLink
-                to="https://github.com/nishidate-yuki"
-                icon={SiGithub}
-                name={"GitHub"}
-              />
-            </ListItem>
-
-            <ListItem>
-              <SocialLink
-                to="https://zenn.dev/nishiki"
-                icon={SiZenn}
-                name={"Zenn"}
-              />
-            </ListItem>
-          </List>
+    <Layout>
+      <Flex align={"center"} mb={8}>
+        <Box>
+          <Heading mb={4}>Yuki Nishidate</Heading>
+          <Text mb={2}>慶應義塾大学 情報工学科 4 年</Text>
+          <Text mb={2}>コンピュータグラフィックスを勉強中です</Text>
         </Box>
+        <Spacer />
+        <StaticImage
+          src={"../images/favicon.png"}
+          alt="logo"
+          layout="fixed"
+          width={100}
+          height={100}
+          placeholder="none"
+        />
+      </Flex>
 
-        <Box mb={8}>
-          <Heading size="md" mb={4}>
-            Lab
-          </Heading>
-          <Link to="https://fj.ics.keio.ac.jp/">
-            🧪{" "}
-            <Text as="u" mb={2}>
-              Fujishiro LAB
-            </Text>
-          </Link>
-        </Box>
-      </Container>
-    </ChakraProvider>
+      <Box mb={8}>
+        <Heading size="md" mb={4}>
+          Social
+        </Heading>
+
+        <List>
+          <ListItem>
+            <SocialLink
+              to="https://twitter.com/yknsdt/"
+              icon={SiTwitter}
+              name={"Twitter"}
+            />
+          </ListItem>
+
+          <ListItem>
+            <SocialLink
+              to="https://github.com/nishidate-yuki"
+              icon={SiGithub}
+              name={"GitHub"}
+            />
+          </ListItem>
+
+          <ListItem>
+            <SocialLink
+              to="https://zenn.dev/nishiki"
+              icon={SiZenn}
+              name={"Zenn"}
+            />
+          </ListItem>
+        </List>
+      </Box>
+    </Layout>
   )
 }
 
