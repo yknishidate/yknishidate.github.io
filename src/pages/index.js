@@ -28,7 +28,7 @@ const SocialLink = ({ to, icon, name }) => {
     //   </Link>
     // </HStack>
 
-    <Link to={to}>
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
       <Button
         p={0}
         variant="ghost"
@@ -37,7 +37,7 @@ const SocialLink = ({ to, icon, name }) => {
       >
         {name}
       </Button>
-    </Link>
+    </a>
   )
 }
 

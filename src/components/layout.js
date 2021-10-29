@@ -4,6 +4,7 @@ import "@fontsource/noto-sans-jp"
 import theme from "../pages/theme"
 
 import Header from "../components/header"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
       <Container maxW="container.sm" py={4}>
         <Header />
         {children}
+        <Footer />
       </Container>
     </ChakraProvider>
   )

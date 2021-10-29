@@ -1,9 +1,15 @@
 import * as React from "react"
-import { Flex, Heading, Spacer, Box } from "@chakra-ui/react"
+import { Flex, Heading, Spacer, Text, Center } from "@chakra-ui/react"
 import { Link } from "gatsby"
 
 const Footer = () => {
-  return <Text>{}</Text>
+  return (
+    <Center>
+      <Text color={"gray.500"}>
+        © {new Date().getFullYear()} Yuki Nishidate. All Rights Reserved.
+      </Text>
+    </Center>
+  )
 }
 
 export default Footer
