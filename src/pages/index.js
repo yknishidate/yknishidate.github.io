@@ -11,6 +11,8 @@ import {
   Icon,
   VStack,
   HStack,
+  List,
+  ListItem,
 } from "@chakra-ui/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -80,6 +82,7 @@ const Home = () => {
             layout="fixed"
             width={100}
             height={100}
+            placeholder="none"
           />
         </Flex>
 
@@ -88,25 +91,31 @@ const Home = () => {
             Social
           </Heading>
 
-          <VStack align={"left"} spacing={0}>
-            <SocialLink
-              to="https://twitter.com/yknsdt/"
-              icon={SiTwitter}
-              name={"yknsdt"}
-            />
+          <List>
+            <ListItem>
+              <SocialLink
+                to="https://twitter.com/yknsdt/"
+                icon={SiTwitter}
+                name={"Twitter"}
+              />
+            </ListItem>
 
-            <SocialLink
-              to="https://github.com/nishidate-yuki"
-              icon={SiGithub}
-              name={"nishidate-yuki"}
-            />
+            <ListItem>
+              <SocialLink
+                to="https://github.com/nishidate-yuki"
+                icon={SiGithub}
+                name={"GitHub"}
+              />
+            </ListItem>
 
-            <SocialLink
-              to="https://github.com/nishidate-yuki"
-              icon={SiZenn}
-              name={"nishidate-yuki"}
-            />
-          </VStack>
+            <ListItem>
+              <SocialLink
+                to="https://zenn.dev/nishiki"
+                icon={SiZenn}
+                name={"Zenn"}
+              />
+            </ListItem>
+          </List>
         </Box>
 
         <Box mb={8}>
