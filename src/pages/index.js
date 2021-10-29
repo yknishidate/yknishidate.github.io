@@ -1,7 +1,5 @@
 import * as React from "react"
 import {
-  ChakraProvider,
-  Container,
   Flex,
   Heading,
   Text,
@@ -17,10 +15,8 @@ import {
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "@fontsource/noto-sans-jp"
-import theme from "./theme"
 
 import { SiZenn, SiGithub, SiTwitter } from "react-icons/si"
-import Header from "../components/header"
 import Layout from "../components/layout"
 
 const SocialLink = ({ to, icon, name }) => {
