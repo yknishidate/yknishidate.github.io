@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Header = () => {
   return (
-    <Flex mb={16}>
+    <Flex mb={16} py={4}>
       <Link to="/">
         <Heading size="md">Nishiki</Heading>
       </Link>

@@ -9,7 +9,7 @@ import Footer from "./footer"
 const Layout = ({ children }) => {
   return (
     <ChakraProvider theme={theme}>
-      <Container maxW="container.sm" py={4}>
+      <Container maxW="container.sm">
         <Header />
         {children}
         <Footer />

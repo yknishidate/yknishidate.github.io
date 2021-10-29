@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Footer = () => {
   return (
-    <Center>
+    <Center mt={16}>
       <Text color={"gray.500"}>
         © {new Date().getFullYear()} Yuki Nishidate. All Rights Reserved.
       </Text>

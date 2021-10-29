@@ -21,14 +21,7 @@ import Layout from "../components/layout"
 
 const SocialLink = ({ to, icon, name }) => {
   return (
-    // <HStack align={"center"}>
-    //   <Icon as={icon} boxSize={5} />
-    //   <Link to={to}>
-    //     <Text as="u">{name}</Text>
-    //   </Link>
-    // </HStack>
-
-    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+    <a href={to} target="_blank" rel="noopener noreferrer">
       <Button
         p={0}
         variant="ghost"
