@@ -10,7 +10,20 @@ import {
   VStack,
   HStack,
   List,
+  UnorderedList,
   ListItem,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
 } from "@chakra-ui/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -54,9 +67,55 @@ const Home = () => {
         />
       </Flex>
 
+      <Accordion allowToggle mb={8}>
+        <AccordionItem>
+          <h2>
+            <AccordionButton>
+              <Box flex="1" textAlign="left">
+                Bio
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4}>
+            <Table variant={"unstyled"}>
+              <Tbody>
+                <Tr>
+                  <Td>2018</Td>
+                  <Td>
+                    慶應義塾湘南藤沢高等部 卒業
+                    <br />
+                    3Dデザイナーインターン @ 家具広告制作会社
+                  </Td>
+                </Tr>
+
+                <Tr>
+                  <Td>2019~2021</Td>
+                  <Td>
+                    {"R&Dエンジニアインターン @ "}
+                    <a
+                      href="https://www.dfx.co.jp/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <u>DIGITAL FRONTIER INC.</u>
+                    </a>
+                  </Td>
+                </Tr>
+
+                <Tr>
+                  <Td>~2022</Td>
+                  <Td>慶應義塾大学 理工学部 情報工学科 在学中</Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </AccordionPanel>
+        </AccordionItem>
+      </Accordion>
+
       <Box mb={8}>
         <Heading size="md" mb={4}>
-          Social
+          Social links
         </Heading>
 
         <List>
