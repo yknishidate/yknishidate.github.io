@@ -7,25 +7,16 @@ import {
   Button,
   Box,
   Icon,
-  VStack,
-  HStack,
-  List,
-  UnorderedList,
-  ListItem,
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
   Table,
-  Thead,
   Tbody,
-  Tfoot,
   Tr,
-  Th,
   Td,
 } from "@chakra-ui/react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import "@fontsource/noto-sans-jp"
 
@@ -36,7 +27,8 @@ const SocialLink = ({ to, icon, name }) => {
   return (
     <a href={to} target="_blank" rel="noopener noreferrer">
       <Button
-        p={0}
+        pl={0}
+        pr={8}
         variant="ghost"
         colorScheme={"blue"}
         leftIcon={<Icon as={icon} />}
@@ -50,22 +42,38 @@ const SocialLink = ({ to, icon, name }) => {
 const Home = () => {
   return (
     <Layout>
-      <Flex align={"center"} mb={8}>
-        <Box>
-          <Heading mb={4}>Yuki Nishidate</Heading>
-          <Text mb={2}>慶應義塾大学 情報工学科 4 年</Text>
-          <Text mb={2}>コンピュータグラフィックスを勉強中です</Text>
-        </Box>
-        <Spacer />
-        <StaticImage
-          src={"../images/favicon.png"}
-          alt="logo"
-          layout="fixed"
-          width={100}
-          height={100}
-          placeholder="none"
+      <Box mb={8}>
+        <Flex align={"center"} mb={4}>
+          <Box>
+            <Heading mb={4}>Yuki Nishidate</Heading>
+            <Text mb={2}>慶應義塾大学 情報工学科 4 年</Text>
+            <Text mb={2}>コンピュータグラフィックスを勉強中です</Text>
+          </Box>
+          <Spacer />
+          <StaticImage
+            src={"../images/favicon.png"}
+            alt="logo"
+            layout="fixed"
+            width={100}
+            height={100}
+            placeholder="none"
+          />
+        </Flex>
+
+        <SocialLink
+          to="https://twitter.com/yknsdt/"
+          icon={SiTwitter}
+          name={"Twitter"}
         />
-      </Flex>
+
+        <SocialLink
+          to="https://github.com/nishidate-yuki"
+          icon={SiGithub}
+          name={"GitHub"}
+        />
+
+        <SocialLink to="https://zenn.dev/nishiki" icon={SiZenn} name={"Zenn"} />
+      </Box>
 
       <Accordion allowToggle mb={8}>
         <AccordionItem>
@@ -112,38 +120,6 @@ const Home = () => {
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
-
-      <Box mb={8}>
-        <Heading size="md" mb={4}>
-          Social links
-        </Heading>
-
-        <List>
-          <ListItem>
-            <SocialLink
-              to="https://twitter.com/yknsdt/"
-              icon={SiTwitter}
-              name={"Twitter"}
-            />
-          </ListItem>
-
-          <ListItem>
-            <SocialLink
-              to="https://github.com/nishidate-yuki"
-              icon={SiGithub}
-              name={"GitHub"}
-            />
-          </ListItem>
-
-          <ListItem>
-            <SocialLink
-              to="https://zenn.dev/nishiki"
-              icon={SiZenn}
-              name={"Zenn"}
-            />
-          </ListItem>
-        </List>
-      </Box>
     </Layout>
   )
 }
