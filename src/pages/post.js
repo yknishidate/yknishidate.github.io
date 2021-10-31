@@ -17,7 +17,7 @@ import Seo from "../components/seo";
 
 const Properties = ({ product }) => {
   return (
-    <Box>
+    <Box mb={8}>
       {product.frontmatter.tags.map((tag) => {
         return <Badge mr={2}>{tag}</Badge>;
       })}
