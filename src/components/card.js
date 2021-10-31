@@ -1,14 +1,37 @@
-import * as React from "react"
-import { Text, Center } from "@chakra-ui/react"
+import * as React from "react";
+import {
+  Heading,
+  Text,
+  GridItem,
+  Container,
+  Badge,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
-const Card = ({ title, thumb, tags }) => {
+const Card = ({ product }) => {
+  const bgColor = useColorModeValue("gray.100", "gray.700");
+  const { slug } = product;
+  const { title, date, tags, thumb } = product.frontmatter;
+  const image = getImage(thumb);
+
   return (
-    <Center my={16}>
-      <Text color={"gray.500"}>
-        © {new Date().getFullYear()} Yuki Nishidate. All Rights Reserved.
-      </Text>
-    </Center>
-  )
-}
+    <Link to={`/post/${slug}/`}>
+      <GridItem bg={bgColor} height={"100%"} rounded={"md"} overflow={"hidden"}>
+        <GatsbyImage image={image} />
+        <Container py={4}>
+          <Heading size={"md"} fontWeight={"normal"} pb={2}>
+            {title}
+          </Heading>
+          {tags.map((tag) => {
+            return <Badge mr={2}>{tag}</Badge>;
+          })}
+          <Text>{date}</Text>
+        </Container>
+      </GridItem>
+    </Link>
+  );
+};
 
-export default Card
+export default Card;

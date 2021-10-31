@@ -5,12 +5,10 @@ import Seo from "../components/seo";
 
 const NotFoundPage = () => {
   return (
-    <>
+    <Layout>
       <Seo title="404"></Seo>
-      <Layout>
-        <Heading>404: Page Not Found</Heading>
-      </Layout>
-    </>
+      <Heading>404: Page Not Found</Heading>
+    </Layout>
   );
 };
 

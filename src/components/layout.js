@@ -1,11 +1,21 @@
-import * as React from "react"
-import { ChakraProvider, Container } from "@chakra-ui/react"
-import "@fontsource/noto-sans-jp"
-import theme from "../pages/theme"
-import "./base.css"
+import * as React from "react";
+import { ChakraProvider, Container, extendTheme } from "@chakra-ui/react";
+import "@fontsource/noto-sans-jp";
+import "./base.css";
 
-import Header from "../components/header"
-import Footer from "./footer"
+import Header from "../components/header";
+import Footer from "./footer";
+
+const extensions = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+  fonts: {
+    heading: "Noto Sans JP",
+    body: "Noto Sans JP",
+  },
+};
+
+const theme = extendTheme({ extensions });
 
 const Layout = ({ children }) => {
   return (
@@ -16,7 +26,7 @@ const Layout = ({ children }) => {
         <Footer />
       </Container>
     </ChakraProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
