@@ -9,7 +9,14 @@ tags:
  - RayTracing
 ---
 
+import { AspectRatio  } from "@chakra-ui/react";
+
 CGソフトっぽいものをOpenGLの勉強として作成してみました。レンダリングとかもできます。GUIはQtを使っています。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BoKZjg5-M4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<AspectRatio w="100%" ratio={16 / 9}>
+  <iframe
+    title=""
+    src="https://www.youtube.com/embed/BoKZjg5-M4s"
+    allowFullScreen
+  ></iframe>
+</AspectRatio>
