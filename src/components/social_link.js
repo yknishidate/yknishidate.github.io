@@ -6,6 +6,7 @@ const SocialLink = ({ to, icon, name }) => {
     <a href={to} target="_blank" rel="noopener noreferrer">
       <Button
         mr={2}
+        mb={2}
         variant="outline"
         colorScheme={"blue"}
         leftIcon={<Icon as={icon} />}

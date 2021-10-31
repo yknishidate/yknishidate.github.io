@@ -75,19 +75,25 @@ const IndexPage = () => {
           )}
         </Flex>
 
-        <SocialLink
-          to="https://twitter.com/yknsdt/"
-          icon={SiTwitter}
-          name={"Twitter"}
-        />
+        <Flex direction={isMobile ? "column" : "row"}>
+          <SocialLink
+            to="https://twitter.com/yknsdt/"
+            icon={SiTwitter}
+            name={"Twitter"}
+          />
 
-        <SocialLink
-          to="https://github.com/nishidate-yuki"
-          icon={SiGithub}
-          name={"GitHub"}
-        />
+          <SocialLink
+            to="https://github.com/nishidate-yuki"
+            icon={SiGithub}
+            name={"GitHub"}
+          />
 
-        <SocialLink to="https://zenn.dev/nishiki" icon={SiZenn} name={"Zenn"} />
+          <SocialLink
+            to="https://zenn.dev/nishiki"
+            icon={SiZenn}
+            name={"Zenn"}
+          />
+        </Flex>
       </Box>
 
       <Accordion allowToggle mb={8}>
