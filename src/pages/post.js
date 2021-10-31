@@ -19,7 +19,11 @@ const Properties = ({ product }) => {
   return (
     <Box mb={8}>
       {product.frontmatter.tags.map((tag) => {
-        return <Badge mr={2}>{tag}</Badge>;
+        return (
+          <Badge mr={2} textTransform={"none"}>
+            {tag}
+          </Badge>
+        );
       })}
       <Text>{product.frontmatter.date}</Text>
     </Box>

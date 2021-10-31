@@ -12,6 +12,7 @@ import { Link } from "gatsby";
 
 const Card = ({ product }) => {
   const bgColor = useColorModeValue("gray.100", "gray.700");
+  const tagColor = useColorModeValue("gray.200", "gray.600");
   const { slug } = product;
   const { title, date, tags, thumb } = product.frontmatter;
   const image = getImage(thumb);
@@ -25,7 +26,11 @@ const Card = ({ product }) => {
             {title}
           </Heading>
           {tags.map((tag) => {
-            return <Badge mr={2}>{tag}</Badge>;
+            return (
+              <Badge mr={2} bg={tagColor} textTransform={"none"}>
+                {tag}
+              </Badge>
+            );
           })}
           <Text>{date}</Text>
         </Container>
