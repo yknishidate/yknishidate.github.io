@@ -1,0 +1,35 @@
+---
+title: "Realtime Rendering"
+thumb: "images/2021-10-31-10-13-16.png"
+date: 2020-07-01
+tags:
+ - C++
+ - OpenGL
+---
+
+import Video from '../components/video';
+
+GPUリアルタイムレンダリングに挑戦してみました。
+
+## Realtime PBR
+
+物理ベースレンダリングの理論を学び、OpenGLで実装してみました。
+
+Split sum approximationについては何故こんな近似でいいのか分かっていません。
+
+### Features
+
+- HDRIからのCubemap作成
+- Diffuse IBL
+- Specular IBL
+
+![](https://raw.githubusercontent.com/nishidate-yuki/storage/master/pbr.webp)
+
+## Shadow Mapping
+
+シャドウマッピングも実装してみました。実装が面倒なうえにあまり綺麗ではないので微妙です。
+
+Cascaded Shadow Mapsとかにすれば良いのでしょうが、ちょっと面倒すぎるのでRaytrace shadowにしたいです。
+
+![](images/2021-10-31-09-49-26.png)
+

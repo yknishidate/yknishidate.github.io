@@ -1,0 +1,24 @@
+---
+title: "Path tracing"
+thumb: "images/2021-10-31-00-23-30.png"
+date: 2020-04-01
+tags:
+ - C++
+ - RayTracing
+---
+
+パストレーシングを理論から学び、実装してみました。環境はCPUです。
+
+## BVH + IBL
+
+HDRIを使ってIBL(Image Based Lighting)を行うことで、とてもリアルな画が出せました。また、メッシュの衝突判定も行っており、高速化のために簡単なBVH(Bounding Volume Hierarchy)も実装しています。
+
+![](images/2021-10-31-00-19-32.png)
+
+## Next Event Estimation
+
+Next Event Estimationも実装しました。収束が早くて素晴らしいです。
+
+![](images/2021-10-31-00-23-03.png)
+
+![](images/2021-10-31-00-23-07.png)
