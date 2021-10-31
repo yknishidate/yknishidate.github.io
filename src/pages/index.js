@@ -24,6 +24,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import SocialLink from "../components/social_link";
 import Card from "../components/card";
+import Fade from "react-reveal/Fade";
 
 const IndexPage = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
@@ -195,7 +196,11 @@ const IndexPage = () => {
       <Text mb={4}>趣味で作ったものなどを載せています</Text>
       <SimpleGrid columns={isMobile ? 1 : 2} spacing={4}>
         {mdxs.map((mdx) => {
-          return <Card product={mdx}></Card>;
+          return (
+            <Fade bottom duration={500} delay={100} distance="30px">
+              <Card product={mdx}></Card>
+            </Fade>
+          );
         })}
       </SimpleGrid>
     </Layout>
