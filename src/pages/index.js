@@ -18,7 +18,6 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
-import { useMediaQuery } from "react-responsive";
 import { SiZenn, SiGithub, SiTwitter } from "react-icons/si";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -27,7 +26,6 @@ import Card from "../components/card";
 import Fade from "react-reveal/Fade";
 
 const IndexPage = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
   const data = useStaticQuery(
     graphql`
       query {
@@ -64,7 +62,7 @@ const IndexPage = () => {
             <Text mb={2}>コンピュータグラフィックスを勉強中です</Text>
           </Box>
           <Spacer />
-          {!isMobile && (
+          <Box display={{ base: "none", sm: "inline" }}>
             <StaticImage
               src={"../images/favicon.png"}
               alt="logo"
@@ -73,10 +71,10 @@ const IndexPage = () => {
               height={100}
               placeholder="none"
             />
-          )}
+          </Box>
         </Flex>
 
-        <Flex direction={isMobile ? "column" : "row"}>
+        <Flex direction={{ base: "column", sm: "row" }}>
           <SocialLink
             to="https://twitter.com/yknsdt/"
             icon={SiTwitter}
@@ -194,7 +192,7 @@ const IndexPage = () => {
         Posts
       </Heading>
       <Text mb={4}>趣味で作ったものなどを載せています</Text>
-      <SimpleGrid columns={isMobile ? 1 : 2} spacing={4}>
+      <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4}>
         {mdxs.map((mdx) => {
           return (
             <Fade bottom duration={500} delay={100} distance="30px">
