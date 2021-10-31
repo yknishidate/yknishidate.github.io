@@ -17,7 +17,7 @@ import Seo from "../components/seo";
 
 const Properties = ({ product }) => {
   return (
-    <Box pb={8}>
+    <Box>
       {product.frontmatter.tags.map((tag) => {
         return <Badge mr={2}>{tag}</Badge>;
       })}
@@ -39,9 +39,9 @@ const Post = ({ pageContext }) => {
 
       <MDXProvider
         components={{
-          h1: (props) => <Heading {...props} pt={8} pb={2} />,
-          h2: (props) => <Heading {...props} pt={8} pb={2} size="md" />,
-          h3: (props) => <Heading {...props} pt={4} pb={2} size="sm" />,
+          h1: (props) => <Heading {...props} pt={8} pb={2} size="xl" />,
+          h2: (props) => <Heading {...props} pt={8} pb={2} size="lg" />,
+          h3: (props) => <Heading {...props} pt={4} pb={2} size="md" />,
           p: (props) => <Text {...props} pb={2} />,
           pre: (props) => (
             <Code {...props} display={"block"} whiteSpace={"pre"} p={4} />

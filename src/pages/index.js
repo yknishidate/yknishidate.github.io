@@ -189,7 +189,10 @@ const IndexPage = () => {
         </AccordionItem>
       </Accordion>
 
-      <Heading mb={4}>Posts</Heading>
+      <Heading mb={4} size={"lg"}>
+        Posts
+      </Heading>
+      <Text mb={4}>趣味で作ったものなどを載せています</Text>
       <SimpleGrid columns={isMobile ? 1 : 2} spacing={4}>
         {mdxs.map((mdx) => {
           return <Card product={mdx}></Card>;
