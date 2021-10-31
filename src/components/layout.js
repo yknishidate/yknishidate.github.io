@@ -1,8 +1,6 @@
 import * as React from "react";
 import { ChakraProvider, Container, extendTheme } from "@chakra-ui/react";
 import "@fontsource/noto-sans-jp";
-import "./base.css";
-
 import Header from "../components/header";
 import Footer from "./footer";
 
