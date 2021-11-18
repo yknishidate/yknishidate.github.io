@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Container maxW="container.md" pt={24}>
+      <Container maxW="container.md" pt={32}>
         {children}
         <Footer />
       </Container>

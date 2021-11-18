@@ -38,9 +38,7 @@ const Post = ({ pageContext }) => {
   return (
     <Layout>
       <Seo title={product.frontmatter.title}></Seo>
-      <Heading mb={4} size={"xl"}>
-        {product.frontmatter.title}
-      </Heading>
+      <Heading mb={4}>{product.frontmatter.title}</Heading>
       <Properties product={product}></Properties>
 
       <MDXProvider
