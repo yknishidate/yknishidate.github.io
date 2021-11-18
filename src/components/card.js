@@ -27,7 +27,7 @@ const Card = ({ product }) => {
           </Heading>
           {tags.map((tag) => {
             return (
-              <Badge mr={2} bg={tagColor} textTransform={"none"}>
+              <Badge mr={2} bg={tagColor} textTransform={"none"} px={2}>
                 {tag}
               </Badge>
             );

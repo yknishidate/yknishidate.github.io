@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 
-const Seo = ({ title, image }) => {
+const Seo = ({ title }) => {
   const siteTitle = "Nishiki";
   const lang = `ja`;
   return (
@@ -21,7 +21,7 @@ const Seo = ({ title, image }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary_large_image`,
+          content: `summary`,
         },
         {
           name: `twitter:title`,
@@ -29,15 +29,11 @@ const Seo = ({ title, image }) => {
         },
         {
           name: `twitter:image`,
-          content: image,
+          content: `https://raw.githubusercontent.com/nishidate-yuki/nishidate-yuki.github.io/master/icons/icon-256x256.png`,
         },
       ]}
     />
   );
-};
-
-Seo.defaultProps = {
-  image: `https://pbs.twimg.com/profile_banners/701528818217975808/1532349288/1080x360`,
 };
 
 Seo.propTypes = {

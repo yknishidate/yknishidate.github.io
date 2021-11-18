@@ -54,10 +54,12 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <Box mb={8}>
+      <Box mb={8} mt={8}>
         <Flex align={"center"} mb={4}>
           <Box>
-            <Heading mb={4}>Yuki Nishidate</Heading>
+            <Heading mb={4} size={"2xl"}>
+              Yuki Nishidate
+            </Heading>
             <Text mb={2}>慶應義塾大学 情報工学科 4 年</Text>
             <Text mb={2}>コンピュータグラフィックスを勉強中です</Text>
           </Box>
@@ -74,7 +76,7 @@ const IndexPage = () => {
           </Box>
         </Flex>
 
-        <Flex direction={{ base: "column", sm: "row" }}>
+        <Flex direction={"row"}>
           <SocialLink
             to="https://twitter.com/yknsdt/"
             icon={SiTwitter}
@@ -95,7 +97,7 @@ const IndexPage = () => {
         </Flex>
       </Box>
 
-      <Accordion allowToggle mb={8}>
+      <Accordion allowToggle mb={16}>
         <AccordionItem>
           <AccordionButton _focus={{ _focus: "none" }}>
             <Box flex="1" textAlign="left">
@@ -188,7 +190,7 @@ const IndexPage = () => {
         </AccordionItem>
       </Accordion>
 
-      <Heading mb={4} size={"lg"}>
+      <Heading mb={4} size={"2xl"}>
         Posts
       </Heading>
       <Text mb={4}>趣味で作ったものなどを載せています</Text>

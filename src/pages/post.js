@@ -20,7 +20,7 @@ const Properties = ({ product }) => {
     <Box mb={8}>
       {product.frontmatter.tags.map((tag) => {
         return (
-          <Badge mr={2} textTransform={"none"}>
+          <Badge mr={2} textTransform={"none"} px={2} py={1}>
             {tag}
           </Badge>
         );
@@ -38,7 +38,9 @@ const Post = ({ pageContext }) => {
   return (
     <Layout>
       <Seo title={product.frontmatter.title}></Seo>
-      <Heading>{product.frontmatter.title}</Heading>
+      <Heading mb={4} size={"2xl"}>
+        {product.frontmatter.title}
+      </Heading>
       <Properties product={product}></Properties>
 
       <MDXProvider

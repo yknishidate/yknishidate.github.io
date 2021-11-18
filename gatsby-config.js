@@ -27,6 +27,12 @@ module.exports = {
       },
       __key: "posts",
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "src/images/favicon.png",
+      },
+    },
     "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
