@@ -57,7 +57,7 @@ const IndexPage = () => {
       <Box mb={8} mt={8}>
         <Flex align={"center"} mb={4}>
           <Box>
-            <Heading mb={4} size={"2xl"}>
+            <Heading mb={4} size={"xl"}>
               Yuki Nishidate
             </Heading>
             <Text mb={2}>慶應義塾大学 情報工学科 4 年</Text>
@@ -190,7 +190,7 @@ const IndexPage = () => {
         </AccordionItem>
       </Accordion>
 
-      <Heading mb={4} size={"2xl"}>
+      <Heading mb={4} size={"xl"}>
         Posts
       </Heading>
       <Text mb={4}>趣味で作ったものなどを載せています</Text>
