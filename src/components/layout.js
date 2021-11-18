@@ -4,22 +4,27 @@ import "@fontsource/noto-sans-jp";
 import Header from "../components/header";
 import Footer from "./footer";
 
-const extensions = {
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        overflowY: "scroll",
+      },
+    },
+  },
   initialColorMode: "dark",
   useSystemColorMode: false,
-  fonts: {
-    heading: "Noto Sans JP",
-    body: "Noto Sans JP",
-  },
-};
-
-const theme = extendTheme({ extensions });
+  // fonts: {
+  //   heading: "Noto Sans JP",
+  //   body: "Noto Sans JP",
+  // },
+});
 
 const Layout = ({ children }) => {
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Container maxW="container.md" pt={32}>
+      <Container maxW="container.md" pt={32} minH={"100vh"}>
         {children}
         <Footer />
       </Container>
