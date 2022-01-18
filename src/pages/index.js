@@ -58,8 +58,7 @@ const IndexPage = () => {
         <Flex align={"center"} mb={4}>
           <Box>
             <Heading mb={4}>Yuki Nishidate</Heading>
-            <Text mb={2}>慶應義塾大学 情報工学科 4 年</Text>
-            <Text mb={2}>コンピュータグラフィックスを勉強中です</Text>
+            <Text mb={2}>コンピュータグラフィックスを勉強中の大学生です✍</Text>
           </Box>
           <Spacer />
           <Box display={{ base: "none", sm: "inline" }}>
@@ -76,13 +75,13 @@ const IndexPage = () => {
 
         <Flex direction={"row"}>
           <SocialLink
-            to="https://twitter.com/yknsdt/"
+            to="https://twitter.com/yknishidate/"
             icon={SiTwitter}
             name={"Twitter"}
           />
 
           <SocialLink
-            to="https://github.com/nishidate-yuki"
+            to="https://github.com/yknishidate"
             icon={SiGithub}
             name={"GitHub"}
           />
@@ -99,7 +98,7 @@ const IndexPage = () => {
         <AccordionItem>
           <AccordionButton _focus={{ _focus: "none" }}>
             <Box flex="1" textAlign="left">
-              Bio
+              学歴
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -108,27 +107,8 @@ const IndexPage = () => {
               <Tbody>
                 <Tr>
                   <Td>2018</Td>
-                  <Td>
-                    慶應義塾湘南藤沢高等部 卒業
-                    <br />
-                    3Dデザイナーインターン @ 家具広告制作会社
-                  </Td>
+                  <Td>慶應義塾湘南藤沢高等部 卒業</Td>
                 </Tr>
-
-                <Tr>
-                  <Td>2019~2021</Td>
-                  <Td>
-                    {"R&Dエンジニアインターン @ "}
-                    <a
-                      href="https://www.dfx.co.jp/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <u>DIGITAL FRONTIER INC.</u>
-                    </a>
-                  </Td>
-                </Tr>
-
                 <Tr>
                   <Td>~2022</Td>
                   <Td>慶應義塾大学 理工学部 情報工学科 在学中</Td>
@@ -141,7 +121,7 @@ const IndexPage = () => {
         <AccordionItem>
           <AccordionButton _focus={{ _focus: "none" }}>
             <Box flex="1" textAlign="left">
-              Tools
+              活動
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -149,38 +129,52 @@ const IndexPage = () => {
             <Table variant={"unstyled"}>
               <Tbody>
                 <Tr>
-                  <Td>C++</Td>
-                  <Td>グラフィックス関連でよく使っています</Td>
+                  <Td>2017</Td>
+                  <Td>
+                    デジタルハリウッド大学U-18アーティストコンテストCG部門優秀賞
+                  </Td>
                 </Tr>
-
                 <Tr>
-                  <Td>Python</Td>
-                  <Td>バイトで数値処理に使っています</Td>
+                  <Td>2018</Td>
+                  <Td>基本情報技術者</Td>
                 </Tr>
-
                 <Tr>
-                  <Td>Vulkan</Td>
-                  <Td>得意ではないですが、よく書いています</Td>
+                  <Td>2019</Td>
+                  <Td>CGエンジニア検定エキスパート</Td>
                 </Tr>
-
                 <Tr>
-                  <Td>React</Td>
-                  <Td>当サイトを作るために使っています</Td>
+                  <Td>2019</Td>
+                  <Td>CGクリエイター検定エキスパート</Td>
                 </Tr>
-
                 <Tr>
-                  <Td>Qt</Td>
-                  <Td>たまに使っていました</Td>
+                  <Td>2019</Td>
+                  <Td>文部科学大臣賞（CGエンジニア検定エキスパート満点）</Td>
                 </Tr>
+              </Tbody>
+            </Table>
+          </AccordionPanel>
+        </AccordionItem>
 
+        <AccordionItem>
+          <AccordionButton _focus={{ _focus: "none" }}>
+            <Box flex="1" textAlign="left">
+              実務経験
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+          <AccordionPanel pb={4}>
+            <Table variant={"unstyled"}>
+              <Tbody>
                 <Tr>
-                  <Td>Cinema 4D</Td>
-                  <Td>以前はよくCG制作に使っていました</Td>
+                  <Td>2019</Td>
+                  <Td>3Dデザイナー（インターン）@ 家具広告制作会社</Td>
                 </Tr>
-
                 <Tr>
-                  <Td>Houdini</Td>
-                  <Td>ごく稀に使っています</Td>
+                  <Td>2019-2021</Td>
+                  <Td>
+                    R&Dエンジニア（インターン＆アルバイト）@ DIGITAL FRONTIER
+                    INC.
+                  </Td>
                 </Tr>
               </Tbody>
             </Table>

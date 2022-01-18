@@ -29,7 +29,7 @@ const Seo = ({ title }) => {
         },
         {
           name: `twitter:image`,
-          content: `https://raw.githubusercontent.com/nishidate-yuki/nishidate-yuki.github.io/master/icons/icon-256x256.png`,
+          content: `https://raw.githubusercontent.com/yknishidate/yknishidate.github.io/master/icons/icon-256x256.png`,
         },
       ]}
     />
