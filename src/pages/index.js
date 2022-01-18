@@ -16,6 +16,8 @@ import {
   Tr,
   Td,
   SimpleGrid,
+  VStack,
+  HStack,
 } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
 import { SiZenn, SiGithub, SiTwitter } from "react-icons/si";
@@ -57,7 +59,26 @@ const IndexPage = () => {
       <Box mb={8}>
         <Flex align={"center"} mb={4}>
           <Box>
-            <Heading mb={4}>Yuki Nishidate</Heading>
+            <HStack mb={4} spacing={8}>
+              <Heading>西舘 祐樹</Heading>
+              <Heading
+                color={"gray.400"}
+                display={{ base: "none", sm: "inline" }}
+              >
+                Yuki Nishidate
+              </Heading>
+            </HStack>
+            {/* <VStack mb={4} spacing={-8} align="left">
+              <Heading
+                color={"gray.100"}
+                size="3xl"
+                userSelect={"none"}
+                display={{ base: "none", sm: "inline" }}
+              >
+                Yuki Nishidate
+              </Heading>
+              <Heading>西舘 祐樹</Heading>
+            </VStack> */}
             <Text mb={2}>コンピュータグラフィックスを勉強中の大学生です✍</Text>
           </Box>
           <Spacer />
