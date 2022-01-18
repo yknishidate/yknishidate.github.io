@@ -16,7 +16,6 @@ import {
   Tr,
   Td,
   SimpleGrid,
-  VStack,
   HStack,
 } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
@@ -68,17 +67,6 @@ const IndexPage = () => {
                 Yuki Nishidate
               </Heading>
             </HStack>
-            {/* <VStack mb={4} spacing={-8} align="left">
-              <Heading
-                color={"gray.100"}
-                size="3xl"
-                userSelect={"none"}
-                display={{ base: "none", sm: "inline" }}
-              >
-                Yuki Nishidate
-              </Heading>
-              <Heading>西舘 祐樹</Heading>
-            </VStack> */}
             <Text mb={2}>コンピュータグラフィックスを勉強中の大学生です✍</Text>
           </Box>
           <Spacer />
@@ -179,7 +167,7 @@ const IndexPage = () => {
         <AccordionItem>
           <AccordionButton _focus={{ _focus: "none" }}>
             <Box flex="1" textAlign="left">
-              実務経験
+              職歴
             </Box>
             <AccordionIcon />
           </AccordionButton>
