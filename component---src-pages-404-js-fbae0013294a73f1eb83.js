@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmarkdown_blog=self.webpackChunkmarkdown_blog||[]).push([[883],{9616:function(e,n,t){t.r(n);var l=t(7294),u=t(4762),a=t(6987),r=t(3004);n.default=function(){return l.createElement(a.Z,null,l.createElement(r.Z,{title:"404"}),l.createElement(u.X,null,"404: Page Not Found"))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-fbae0013294a73f1eb83.js.map
