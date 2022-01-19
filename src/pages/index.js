@@ -13,6 +13,7 @@ import {
   AccordionIcon,
   Table,
   Tbody,
+  TableCaption,
   Tr,
   Td,
   SimpleGrid,
@@ -25,6 +26,10 @@ import Seo from "../components/seo";
 import SocialLink from "../components/social_link";
 import Card from "../components/card";
 import Fade from "react-reveal/Fade";
+
+const Year = ({ year }) => {
+  return <Td width={"8em"}>{year}</Td>;
+};
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -59,7 +64,7 @@ const IndexPage = () => {
         <Flex align={"center"} mb={4}>
           <Box>
             <HStack mb={4} spacing={8}>
-              <Heading>西舘 祐樹</Heading>
+              <Heading size={"2xl"}>西舘 祐樹</Heading>
               <Heading
                 color={"gray.400"}
                 display={{ base: "none", sm: "inline" }}
@@ -107,79 +112,68 @@ const IndexPage = () => {
         <AccordionItem>
           <AccordionButton _focus={{ _focus: "none" }}>
             <Box flex="1" textAlign="left">
-              学歴
+              About me
             </Box>
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4}>
             <Table variant={"unstyled"}>
+              <TableCaption placement="top" size="md" bg="gray.100">
+                学歴
+              </TableCaption>
               <Tbody>
                 <Tr>
-                  <Td>2018</Td>
+                  <Year year="2018" />
                   <Td>慶應義塾湘南藤沢高等部 卒業</Td>
                 </Tr>
                 <Tr>
-                  <Td>~2022</Td>
+                  <Year year="~2022" />
                   <Td>慶應義塾大学 理工学部 情報工学科 在学中</Td>
                 </Tr>
               </Tbody>
             </Table>
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem>
-          <AccordionButton _focus={{ _focus: "none" }}>
-            <Box flex="1" textAlign="left">
-              活動
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel pb={4}>
             <Table variant={"unstyled"}>
+              <TableCaption placement="top" bg="gray.100">
+                活動
+              </TableCaption>
               <Tbody>
                 <Tr>
-                  <Td>2017</Td>
+                  <Year year="2017" />
                   <Td>
-                    デジタルハリウッド大学U-18アーティストコンテストCG部門優秀賞
+                    デジタルハリウッド大学U-18アーティストコンテストCG部門優秀賞受賞
                   </Td>
                 </Tr>
                 <Tr>
-                  <Td>2018</Td>
-                  <Td>基本情報技術者</Td>
+                  <Year year="2018" />
+                  <Td>基本情報技術者試験合格</Td>
                 </Tr>
                 <Tr>
-                  <Td>2019</Td>
-                  <Td>CGエンジニア検定エキスパート</Td>
+                  <Year year="2019" />
+                  <Td>CGエンジニア検定エキスパート合格</Td>
                 </Tr>
                 <Tr>
-                  <Td>2019</Td>
-                  <Td>CGクリエイター検定エキスパート</Td>
+                  <Year year="2019" />
+                  <Td>CGクリエイター検定エキスパート合格</Td>
                 </Tr>
                 <Tr>
-                  <Td>2019</Td>
-                  <Td>文部科学大臣賞（CGエンジニア検定エキスパート満点）</Td>
+                  <Year year="2019" />
+                  <Td>
+                    文部科学大臣賞受賞（CGエンジニア検定エキスパート満点）
+                  </Td>
                 </Tr>
               </Tbody>
             </Table>
-          </AccordionPanel>
-        </AccordionItem>
-
-        <AccordionItem>
-          <AccordionButton _focus={{ _focus: "none" }}>
-            <Box flex="1" textAlign="left">
-              職歴
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel pb={4}>
             <Table variant={"unstyled"}>
+              <TableCaption placement="top" bg="gray.100">
+                職歴
+              </TableCaption>
               <Tbody>
                 <Tr>
-                  <Td>2019</Td>
+                  <Year year="2019" />
                   <Td>3Dデザイナー（インターン）@ 家具広告制作会社</Td>
                 </Tr>
                 <Tr>
-                  <Td>2019-2021</Td>
+                  <Year year="2019-2021" />
                   <Td>
                     R&Dエンジニア（インターン＆アルバイト）@ DIGITAL FRONTIER
                     INC.
