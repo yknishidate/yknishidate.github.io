@@ -161,6 +161,10 @@ const IndexPage = () => {
                     文部科学大臣賞受賞（CGエンジニア検定エキスパート満点）
                   </Td>
                 </Tr>
+                <Tr>
+                  <Year year="2022" />
+                  <Td>バンダイナムコ研究所データサイエンス・チャレンジ優勝</Td>
+                </Tr>
               </Tbody>
             </Table>
             <Table variant={"unstyled"}>
