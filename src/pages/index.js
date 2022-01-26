@@ -72,7 +72,7 @@ const IndexPage = () => {
                 Yuki Nishidate
               </Heading>
             </HStack>
-            <Text mb={2}>コンピュータグラフィックスを勉強中の大学生です✍</Text>
+            <Text mb={2}>コンピュータグラフィックスを勉強中の大学生です</Text>
           </Box>
           <Spacer />
           <Box display={{ base: "none", sm: "inline" }}>
