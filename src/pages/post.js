@@ -25,7 +25,6 @@ const Properties = ({ product }) => {
           </Badge>
         );
       })}
-      <Text>{product.frontmatter.date}</Text>
     </Box>
   );
 };
@@ -38,6 +37,10 @@ const Post = ({ pageContext }) => {
   return (
     <Layout>
       <Seo title={product.frontmatter.title}></Seo>
+
+      <Text mb={2} color="gray.500">
+        {product.frontmatter.date}
+      </Text>
       <Heading mb={4}>{product.frontmatter.title}</Heading>
       <Properties product={product}></Properties>
 

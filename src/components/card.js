@@ -22,7 +22,10 @@ const Card = ({ product }) => {
       <GridItem bg={bgColor} height={"100%"} rounded={"md"} overflow={"hidden"}>
         <GatsbyImage image={image} />
         <Container py={4}>
-          <Heading size={"md"} fontWeight={"normal"} pb={2}>
+          <Text mb={2} color="gray.500">
+            {date}
+          </Text>
+          <Heading size={"md"} fontWeight={"normal"} mb={2}>
             {title}
           </Heading>
           {tags.map((tag) => {
@@ -32,7 +35,6 @@ const Card = ({ product }) => {
               </Badge>
             );
           })}
-          <Text>{date}</Text>
         </Container>
       </GridItem>
     </Link>
