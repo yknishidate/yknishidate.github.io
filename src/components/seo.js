@@ -1,15 +1,13 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 
-const Seo = ({ title }) => {
-  const siteTitle = "Nishiki";
+const Seo = () => {
   const lang = `ja`;
+  const title = "西舘祐樹 | Yuki Nishidate";
   return (
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | ${siteTitle}`}
       meta={[
         {
           property: `og:title`,
@@ -25,19 +23,15 @@ const Seo = ({ title }) => {
         },
         {
           name: `twitter:title`,
-          content: `${title} | ${siteTitle}`,
+          content: { title },
         },
         {
           name: `twitter:image`,
-          content: `https://raw.githubusercontent.com/yknishidate/yknishidate.github.io/master/icons/icon-256x256.png`,
+          content: `https://pbs.twimg.com/profile_images/994269415951646720/eDUi27lP_400x400.jpg`,
         },
       ]}
     />
   );
-};
-
-Seo.propTypes = {
-  title: PropTypes.string.isRequired,
 };
 
 export default Seo;

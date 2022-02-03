@@ -59,7 +59,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo />
       <Box mb={8}>
         <Flex align={"center"} mb={4}>
           <Box>
