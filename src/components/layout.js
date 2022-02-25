@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ChakraProvider, Container, extendTheme } from "@chakra-ui/react";
-import "@fontsource/m-plus-1"
+import "@fontsource/m-plus-1";
 import Header from "../components/header";
 import Footer from "./footer";
 
@@ -19,9 +19,9 @@ const theme = extendTheme({
     body: "M PLUS 1",
   },
   colors: {
-    background: 'gray.900',
-    shadow: '#0a0a0a'
-  }
+    background: "gray.900",
+    shadow: "#0a0a0a",
+  },
 });
 
 const Layout = ({ children }) => {

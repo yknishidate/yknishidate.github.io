@@ -11,7 +11,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const Card = ({ product }) => {
-  const bgColor = useColorModeValue("gray.100", "gray.700");
   const tagColor = useColorModeValue("gray.200", "gray.600");
   const { slug } = product;
   const { title, date, tags, thumb } = product.frontmatter;
@@ -19,18 +18,29 @@ const Card = ({ product }) => {
 
   return (
     <Link to={`/post/${slug}/`}>
-      <GridItem bg={bgColor} height={"100%"} rounded={"md"} overflow={"hidden"}>
+      <GridItem
+        // bg={"gray.300"}
+        height={"100%"}
+        rounded={"md"}
+        overflow={"hidden"}
+        border={"1px solid #555"}
+      >
         <GatsbyImage image={image} />
+        {/* <Container py={4} color="gray.900"> */}
         <Container py={4}>
-          <Text mb={2} color="gray.500">
-            {date}
-          </Text>
-          <Heading size={"md"} fontWeight={"normal"} mb={2}>
+          <Text mb={2}>{date}</Text>
+          <Heading size={"md"} mb={2}>
             {title}
           </Heading>
           {tags.map((tag) => {
             return (
-              <Badge mr={2} bg={tagColor} textTransform={"none"} px={2}>
+              <Badge
+                mr={2}
+                bg={"gray.700"}
+                color="gray.200"
+                textTransform={"none"}
+                px={2}
+              >
                 {tag}
               </Badge>
             );

@@ -59,8 +59,10 @@ const IndexPage = () => {
       <Box mb={8}>
         <Flex align={"center"} mb={4}>
           <Box>
-            <Heading size={"2xl"} mb={4}>西舘 祐樹</Heading>
-            <Text mb={2}>コンピュータグラフィックスを勉強中の大学生です</Text>
+            <Heading size={"xl"} mb={8}>
+              西舘 祐樹 / Yuki Nishidate
+            </Heading>
+            <Text mb={8}>コンピュータグラフィックスを勉強中の大学生です</Text>
           </Box>
           <Spacer />
           <Box display={{ base: "none", sm: "inline" }}>
@@ -74,7 +76,7 @@ const IndexPage = () => {
             />
           </Box>
         </Flex>
-        <Link href='https://chakra-ui.com' isExternal color={"gray.900"}>
+        <Link href="https://chakra-ui.com" isExternal color={"gray.900"}>
           Twitter
         </Link>
       </Box>

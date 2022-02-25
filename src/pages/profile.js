@@ -1,59 +1,33 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import {
   Flex,
   Heading,
   Text,
   Spacer,
   Box,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
   Table,
   Tbody,
-  TableCaption,
   Tr,
   Td,
-  SimpleGrid,
   HStack,
   VStack,
   Link,
   Image,
 } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
-import { SiZenn, SiGithub, SiTwitter } from "react-icons/si";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import SocialLink from "../components/social_link";
-import Card from "../components/card";
-import Fade from "react-reveal/Fade";
 
 const EmojiBlock = ({ code, children }) => {
   return (
-    <HStack mb={2} align="baseline">
-      <Box boxSize="1em">
+    <HStack mb={4} align="baseline">
+      <Box boxSize={"1em"}>
         <Image
           src={`https://twemoji.maxcdn.com/v/latest/svg/${code}.svg`}
           display="inline"
         />
       </Box>
       {children}
-    </HStack>
-  );
-};
-
-const EmojiText = ({ code, text }) => {
-  return (
-    <HStack mb={2} align="baseline">
-      <Box boxSize="1em">
-        <Image
-          src={`https://twemoji.maxcdn.com/v/latest/svg/${code}.svg`}
-          display="inline"
-        />
-      </Box>
-      <Text lineHeight={"1em"}>{text}</Text>
     </HStack>
   );
 };
@@ -65,26 +39,20 @@ const ProfilePage = () => {
       <Box mb={8}>
         <Flex align={"top"} mb={16}>
           <Box>
-            <VStack mb={8} align={"left"}>
-              <Heading size={"xl"}>西舘 祐樹 - Yuki Nishidate</Heading>
-            </VStack>
+            <Heading size={"xl"} mb={8}>
+              西舘 祐樹 / Yuki Nishidate
+            </Heading>
             <Text mb={8}>コンピュータグラフィックスを勉強中の大学生です</Text>
 
             <Box mb={8}>
               <EmojiBlock code="1f393">
-                <Text lineHeight={"1em"}>
-                  慶應義塾大学 理工学部 情報工学科4年
-                </Text>
+                <Text>慶應義塾大学 理工学部 情報工学科4年</Text>
               </EmojiBlock>
               <EmojiBlock code="1f4bb">
-                <Text lineHeight={"1em"}>
-                  R&Dエンジニア @ DIGITAL FRONTIER INC. (2019-2021)
-                </Text>
+                <Text>R&Dエンジニア @ DIGITAL FRONTIER INC. (2019-2021)</Text>
               </EmojiBlock>
               <EmojiBlock code="1f4bb">
-                <Text lineHeight={"1em"}>
-                  3Dデザイナー @ 家具広告制作会社 (2018)
-                </Text>
+                <Text>3Dデザイナー @ 家具広告制作会社 (2018)</Text>
               </EmojiBlock>
               <EmojiBlock code="1f517">
                 <HStack>
@@ -94,19 +62,19 @@ const ProfilePage = () => {
                     color={"gray.300"}
                     textDecoration="underline"
                   >
-                    <Text lineHeight={"1em"}>{"Twitter"}</Text>
+                    <Text>{"Twitter"}</Text>
                   </Link>
-                  <Text lineHeight={"1em"}>{" / "}</Text>
+                  <Text>{" / "}</Text>
                   <Link
                     href="https://github.com/yknishidate"
                     isExternal
                     color={"gray.300"}
                     textDecoration="underline"
                   >
-                    <Text lineHeight={"1em"}>{"GitHub"}</Text>
+                    <Text>{"GitHub"}</Text>
                   </Link>
-                  <Text lineHeight={"1em"}>{" / "}</Text>
-                  <Text lineHeight={"1em"}>{"yuki_nishidate[at]keio.jp"}</Text>
+                  <Text>{" / "}</Text>
+                  <Text>{"yuki_nishidate[at]keio.jp"}</Text>
                 </HStack>
               </EmojiBlock>
             </Box>

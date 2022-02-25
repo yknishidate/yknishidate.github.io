@@ -20,7 +20,14 @@ const Properties = ({ product }) => {
     <Box mb={8}>
       {product.frontmatter.tags.map((tag) => {
         return (
-          <Badge mr={2} textTransform={"none"} px={2} py={1}>
+          <Badge
+            mr={2}
+            bg={"gray.700"}
+            color="gray.200"
+            textTransform={"none"}
+            px={2}
+            py={1}
+          >
             {tag}
           </Badge>
         );
@@ -38,9 +45,7 @@ const Post = ({ pageContext }) => {
     <Layout>
       <Seo />
 
-      <Text mb={2} color="gray.500">
-        {product.frontmatter.date}
-      </Text>
+      <Text mb={2}>{product.frontmatter.date}</Text>
       <Heading mb={4}>{product.frontmatter.title}</Heading>
       <Properties product={product}></Properties>
 
@@ -57,7 +62,7 @@ const Post = ({ pageContext }) => {
           tr: Tr,
           td: Td,
           ul: (props) => <Text {...props} pb={2} ml={2} />,
-          a: (props) => <Link {...props} color={"blue.500"} isExternal />,
+          a: (props) => <Link {...props} color={"blue.200"} isExternal />,
         }}
       >
         <MDXRenderer>{product.body}</MDXRenderer>
