@@ -9,17 +9,15 @@ import {
 import { Link } from "gatsby"
 
 const Header = () => {
-  const bgColor = useColorModeValue("white", "gray.800");
-  const borderColor = useColorModeValue("gray.100", "gray.900");
   return (
     <Box
       position="fixed"
       as="nav"
       w="100%"
-      bg={bgColor}
+      bg={"gray.900"}
       zIndex={1}
       borderBottom={"2px"}
-      borderColor={borderColor}
+      borderColor={"#0a0a0a"}
     >
       <Container
         display="flex"

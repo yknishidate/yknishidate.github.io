@@ -9,15 +9,19 @@ const theme = extendTheme({
     global: {
       body: {
         overflowY: "scroll",
+        backgroundColor: "gray.900",
+        color: "white",
       },
     },
   },
-  initialColorMode: "dark",
-  useSystemColorMode: false,
   fonts: {
     heading: "M PLUS 1",
     body: "M PLUS 1",
   },
+  colors: {
+    background: 'gray.900',
+    shadow: '#0a0a0a'
+  }
 });
 
 const Layout = ({ children }) => {
