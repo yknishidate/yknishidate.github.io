@@ -6,7 +6,7 @@ import {
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
 const Header = () => {
   const bgColor = useColorModeValue("white", "gray.800");
@@ -34,6 +34,14 @@ const Header = () => {
           <Heading size="md">Nishiki</Heading>
         </Link>
         <Spacer />
+        <Box mr={8}>
+          <Link to="/">
+            Home
+          </Link>
+        </Box>
+        <Link to="/profile">
+          Profile
+        </Link>
       </Container>
     </Box>
   );
