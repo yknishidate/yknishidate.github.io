@@ -126,17 +126,10 @@ const ProfilePage = () => {
           </Box>
         </Flex>
 
-        <Heading size={"lg"} mb={4}>
+        <Heading size={"lg"} mb={8}>
           活動
         </Heading>
-        <Table variant={"unstyled"}>
-          {/* <TableCaption
-            placement="top"
-            color="white"
-            borderBottom={"solid 1px white"}
-          >
-            活動
-          </TableCaption> */}
+        <Table variant={"unstyled"} borderLeft={"solid 1px gray"}>
           <Tbody>
             <Tr>
               <Td>2017</Td>
@@ -165,88 +158,6 @@ const ProfilePage = () => {
           </Tbody>
         </Table>
       </Box>
-
-      {/*       
-      <Accordion allowToggle mb={16}>
-        <AccordionItem>
-          <AccordionButton _focus={{ _focus: "none" }}>
-            <Box flex="1" textAlign="left">
-              About me
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel pb={4}>
-            <Table variant={"unstyled"}>
-              <TableCaption placement="top" size="md" bg="gray.100">
-                学歴
-              </TableCaption>
-              <Tbody>
-                <Tr>
-                  <Year year="2018" />
-                  <Td>慶應義塾湘南藤沢高等部 卒業</Td>
-                </Tr>
-                <Tr>
-                  <Year year="~2022" />
-                  <Td>慶應義塾大学 理工学部 情報工学科 在学中</Td>
-                </Tr>
-              </Tbody>
-            </Table>
-            <Table variant={"unstyled"}>
-              <TableCaption placement="top" bg="gray.100">
-                活動
-              </TableCaption>
-              <Tbody>
-                <Tr>
-                  <Year year="2017" />
-                  <Td>
-                    デジタルハリウッド大学U-18アーティストコンテストCG部門優秀賞受賞
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Year year="2018" />
-                  <Td>基本情報技術者試験合格</Td>
-                </Tr>
-                <Tr>
-                  <Year year="2019" />
-                  <Td>CGエンジニア検定エキスパート合格</Td>
-                </Tr>
-                <Tr>
-                  <Year year="2019" />
-                  <Td>CGクリエイター検定エキスパート合格</Td>
-                </Tr>
-                <Tr>
-                  <Year year="2019" />
-                  <Td>
-                    文部科学大臣賞受賞（CGエンジニア検定エキスパート満点）
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Year year="2022" />
-                  <Td>バンダイナムコ研究所データサイエンス・チャレンジ優勝</Td>
-                </Tr>
-              </Tbody>
-            </Table>
-            <Table variant={"unstyled"}>
-              <TableCaption placement="top" bg="gray.100">
-                職歴
-              </TableCaption>
-              <Tbody>
-                <Tr>
-                  <Year year="2019" />
-                  <Td>3Dデザイナー（インターン）@ 家具広告制作会社</Td>
-                </Tr>
-                <Tr>
-                  <Year year="2019-2021" />
-                  <Td>
-                    R&Dエンジニア（インターン＆アルバイト）@ DIGITAL FRONTIER
-                    INC.
-                  </Td>
-                </Tr>
-              </Tbody>
-            </Table>
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion> */}
     </Layout>
   );
 };
