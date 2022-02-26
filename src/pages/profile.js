@@ -20,7 +20,7 @@ import Seo from "../components/seo";
 
 const EmojiBlock = ({ code, children }) => {
   return (
-    <HStack mb={4} align="baseline">
+    <HStack mb={2} align="baseline">
       <Box boxSize={"1em"}>
         <Image
           src={`https://twemoji.maxcdn.com/v/latest/svg/${code}.svg`}
@@ -59,8 +59,8 @@ const ProfilePage = () => {
                   <Link
                     href="https://twitter.com/yknishidate"
                     isExternal
-                    color={"gray.300"}
-                    textDecoration="underline"
+                    color={"link"}
+                    _focus={{ _focus: "none" }}
                   >
                     <Text>{"Twitter"}</Text>
                   </Link>
@@ -68,8 +68,8 @@ const ProfilePage = () => {
                   <Link
                     href="https://github.com/yknishidate"
                     isExternal
-                    color={"gray.300"}
-                    textDecoration="underline"
+                    color={"link"}
+                    _focus={{ _focus: "none" }}
                   >
                     <Text>{"GitHub"}</Text>
                   </Link>
@@ -87,8 +87,8 @@ const ProfilePage = () => {
               src={"../images/favicon.png"}
               alt="logo"
               layout="fixed"
-              width={150}
-              height={150}
+              width={120}
+              height={120}
               placeholder="none"
             />
           </Box>

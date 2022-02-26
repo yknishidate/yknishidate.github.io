@@ -62,7 +62,14 @@ const Post = ({ pageContext }) => {
           tr: Tr,
           td: Td,
           ul: (props) => <Text {...props} pb={2} ml={2} />,
-          a: (props) => <Link {...props} color={"blue.200"} isExternal />,
+          a: (props) => (
+            <Link
+              {...props}
+              color={"link"}
+              isExternal
+              _focus={{ _focus: "none" }}
+            />
+          ),
         }}
       >
         <MDXRenderer>{product.body}</MDXRenderer>

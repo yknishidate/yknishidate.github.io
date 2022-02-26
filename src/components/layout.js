@@ -9,7 +9,7 @@ const theme = extendTheme({
     global: {
       body: {
         overflowY: "scroll",
-        backgroundColor: "gray.900",
+        backgroundColor: "#222",
         color: "white",
       },
     },
@@ -19,8 +19,9 @@ const theme = extendTheme({
     body: "M PLUS 1",
   },
   colors: {
-    background: "gray.900",
-    shadow: "#0a0a0a",
+    background: "#222",
+    shadow: "#111",
+    link: "#90CDF4",
   },
 });
 

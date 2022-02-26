@@ -19,14 +19,12 @@ const Card = ({ product }) => {
   return (
     <Link to={`/post/${slug}/`}>
       <GridItem
-        // bg={"gray.300"}
         height={"100%"}
         rounded={"md"}
         overflow={"hidden"}
         border={"1px solid #555"}
       >
         <GatsbyImage image={image} />
-        {/* <Container py={4} color="gray.900"> */}
         <Container py={4}>
           <Text mb={2}>{date}</Text>
           <Heading size={"md"} mb={2}>

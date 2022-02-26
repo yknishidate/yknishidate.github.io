@@ -6,7 +6,7 @@ import {
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 const Header = () => {
   return (
@@ -14,10 +14,10 @@ const Header = () => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={"gray.900"}
+      bg={"background"}
       zIndex={1}
       borderBottom={"2px"}
-      borderColor={"#0a0a0a"}
+      borderColor={"shadow"}
     >
       <Container
         display="flex"
@@ -33,13 +33,9 @@ const Header = () => {
         </Link>
         <Spacer />
         <Box mr={8}>
-          <Link to="/">
-            Home
-          </Link>
+          <Link to="/">Home</Link>
         </Box>
-        <Link to="/profile">
-          Profile
-        </Link>
+        <Link to="/profile">Profile</Link>
       </Container>
     </Box>
   );
