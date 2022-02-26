@@ -4,21 +4,25 @@ import { Helmet } from "react-helmet";
 const Seo = () => {
   const title = `西舘祐樹 | Yuki Nishidate`;
   const description = `Nishiki's personal website`;
-  const image = `https://pbs.twimg.com/profile_images/994269415951646720/eDUi27lP_400x400.jpg`;
+  const image = `https://yknishidate.github.io/static/66bbd614d0f1c543f5464307bed243bd/8d565/favicon.webp`;
   return (
     <Helmet
       htmlAttributes={{ lang: `ja-jp` }}
       title={title}
       description={description}
       meta={[
+        {
+          name: `description`,
+          content: description,
+        },
         // open graph
         {
           property: `og:title`,
-          content: { title },
+          content: title,
         },
         {
           name: `og:description`,
-          content: { description },
+          content: description,
         },
         {
           property: `og:type`,
@@ -26,7 +30,7 @@ const Seo = () => {
         },
         {
           property: `og:image`,
-          content: { image },
+          content: image,
         },
         // twitter
         {
@@ -35,11 +39,11 @@ const Seo = () => {
         },
         {
           name: `twitter:title`,
-          content: { title },
+          content: title,
         },
         {
           name: `twitter:twitter:description`,
-          content: { description },
+          content: description,
         },
         {
           name: `twitter:site`,
@@ -47,7 +51,7 @@ const Seo = () => {
         },
         {
           name: `twitter:image`,
-          content: { image },
+          content: image,
         },
       ]}
     />
