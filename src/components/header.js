@@ -1,11 +1,5 @@
 import * as React from "react";
-import {
-  Box,
-  Container,
-  Heading,
-  Spacer,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Container, Heading, Spacer } from "@chakra-ui/react";
 import { Link } from "gatsby";
 
 const Header = () => {

@@ -1,17 +1,9 @@
 import * as React from "react";
-import {
-  Heading,
-  Text,
-  GridItem,
-  Container,
-  Badge,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Heading, Text, GridItem, Container, Badge } from "@chakra-ui/react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const Card = ({ product }) => {
-  const tagColor = useColorModeValue("gray.200", "gray.600");
   const { slug } = product;
   const { title, date, tags, thumb } = product.frontmatter;
   const image = getImage(thumb);
