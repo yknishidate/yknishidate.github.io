@@ -23,7 +23,9 @@ const Header = () => {
         alignItems={"center"}
       >
         <Link to="/">
-          <Heading size="md">Nishiki</Heading>
+          <Heading as="h4" size="md">
+            Nishiki
+          </Heading>
         </Link>
         <Spacer />
         <Box mr={8}>

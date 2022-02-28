@@ -20,7 +20,7 @@ import Seo from "../components/seo";
 
 const EmojiBlock = ({ code, children }) => {
   return (
-    <HStack mb={2} align="baseline">
+    <HStack align="baseline">
       <Box boxSize={"1em"}>
         <Image
           src={`https://twemoji.maxcdn.com/v/latest/svg/${code}.svg`}
@@ -39,10 +39,10 @@ const ProfilePage = () => {
       <Box mb={8}>
         <Flex align={"top"} mb={16}>
           <Box>
-            <Heading size={"xl"} mb={8}>
+            <Heading as={"h1"} size={"xl"}>
               西舘 祐樹 / Yuki Nishidate
             </Heading>
-            <Text mb={8}>コンピュータグラフィックスを勉強中の大学生です</Text>
+            <Text>コンピュータグラフィックスを勉強中の大学生です</Text>
 
             <Box mb={8}>
               <EmojiBlock code="1f393">
@@ -82,7 +82,7 @@ const ProfilePage = () => {
 
           <Spacer />
 
-          <Box display={{ base: "none", sm: "inline" }}>
+          <Box display={{ base: "none", sm: "inline" }} p={4}>
             <StaticImage
               src={"../images/favicon.png"}
               alt="logo"
@@ -94,34 +94,58 @@ const ProfilePage = () => {
           </Box>
         </Flex>
 
-        <Heading size={"lg"} mb={8}>
+        <Heading as={"h2"} size={"lg"}>
           活動
         </Heading>
         <Table variant={"unstyled"} borderLeft={"solid 1px gray"}>
           <Tbody>
             <Tr>
-              <Td>2017</Td>
-              <Td>DHU U-18アーティストコンテストCG部門優秀賞受賞</Td>
+              <Td px={4} py={2}>
+                2017
+              </Td>
+              <Td px={4} py={2}>
+                DHU U-18アーティストコンテストCG部門優秀賞受賞
+              </Td>
             </Tr>
             <Tr>
-              <Td>2018</Td>
-              <Td>基本情報技術者試験合格</Td>
+              <Td px={4} py={2}>
+                2018
+              </Td>
+              <Td px={4} py={2}>
+                基本情報技術者試験合格
+              </Td>
             </Tr>
             <Tr>
-              <Td>2019</Td>
-              <Td>CGエンジニア検定エキスパート合格</Td>
+              <Td px={4} py={2}>
+                2019
+              </Td>
+              <Td px={4} py={2}>
+                CGエンジニア検定エキスパート合格
+              </Td>
             </Tr>
             <Tr>
-              <Td>2019</Td>
-              <Td>CGクリエイター検定エキスパート合格</Td>
+              <Td px={4} py={2}>
+                2019
+              </Td>
+              <Td px={4} py={2}>
+                CGクリエイター検定エキスパート合格
+              </Td>
             </Tr>
             <Tr>
-              <Td>2019</Td>
-              <Td>文部科学大臣賞受賞（CGエンジニア検定エキスパート満点）</Td>
+              <Td px={4} py={2}>
+                2019
+              </Td>
+              <Td px={4} py={2}>
+                文部科学大臣賞受賞（CGエンジニア検定満点）
+              </Td>
             </Tr>
             <Tr>
-              <Td>2022</Td>
-              <Td>バンダイナムコ研究所データサイエンス・チャレンジ優勝</Td>
+              <Td px={4} py={2}>
+                2022
+              </Td>
+              <Td px={4} py={2}>
+                バンダイナムコ研究所データサイエンスチャレンジ優勝
+              </Td>
             </Tr>
           </Tbody>
         </Table>

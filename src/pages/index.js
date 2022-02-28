@@ -6,19 +6,8 @@ import {
   Text,
   Spacer,
   Box,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Table,
-  Tbody,
-  TableCaption,
-  Tr,
-  Td,
   SimpleGrid,
   Button,
-  Icon,
 } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
@@ -59,19 +48,19 @@ const IndexPage = () => {
       <Box mb={16}>
         <Flex align={"top"}>
           <Box>
-            <Heading size={"xl"} mb={8}>
+            <Heading as={"h1"} size={"xl"}>
               西舘 祐樹 / Yuki Nishidate
             </Heading>
-            <Text mb={4}>コンピュータグラフィックスを勉強中の大学生です</Text>
+            <Text>コンピュータグラフィックスを勉強中の大学生です</Text>
 
             <Link to="/profile">
-              <Button mr={2} mb={2} bg="gray.600">
+              <Button mt={4} bg="gray.600">
                 Read profile
               </Button>
             </Link>
           </Box>
           <Spacer />
-          <Box display={{ base: "none", sm: "inline" }}>
+          <Box display={{ base: "none", sm: "inline" }} p={4}>
             <StaticImage
               src={"../images/favicon.png"}
               alt="logo"
@@ -84,7 +73,7 @@ const IndexPage = () => {
         </Flex>
       </Box>
 
-      <Heading size={"lg"} mb={8}>
+      <Heading as={"h2"} size={"lg"}>
         創作物
       </Heading>
       <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4}>

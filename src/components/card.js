@@ -18,8 +18,8 @@ const Card = ({ product }) => {
       >
         <GatsbyImage image={image} />
         <Container py={4}>
-          <Text mb={2}>{date}</Text>
-          <Heading size={"md"} mb={2}>
+          <Text>{date}</Text>
+          <Heading as={"h3"} size={"md"}>
             {title}
           </Heading>
           {tags.map((tag) => {
