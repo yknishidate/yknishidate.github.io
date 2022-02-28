@@ -45,6 +45,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo />
+
+      {/* section */}
       <Box mb={16}>
         <Flex align={"top"}>
           <Box>
@@ -73,18 +75,21 @@ const IndexPage = () => {
         </Flex>
       </Box>
 
-      <Heading as={"h2"} size={"lg"}>
-        創作物
-      </Heading>
-      <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4}>
-        {mdxs.map((mdx) => {
-          return (
-            <Fade bottom duration={500} delay={100} distance="30px">
-              <Card product={mdx}></Card>
-            </Fade>
-          );
-        })}
-      </SimpleGrid>
+      {/* section */}
+      <Box>
+        <Heading as={"h2"} size={"lg"}>
+          創作物
+        </Heading>
+        <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4}>
+          {mdxs.map((mdx) => {
+            return (
+              <Fade bottom duration={500} delay={100} distance="30px">
+                <Card product={mdx}></Card>
+              </Fade>
+            );
+          })}
+        </SimpleGrid>
+      </Box>
     </Layout>
   );
 };

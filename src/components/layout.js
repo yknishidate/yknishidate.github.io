@@ -13,15 +13,12 @@ const theme = extendTheme({
         color: "white",
       },
       h1: {
-        color: "red",
         pb: 4,
       },
       h2: {
-        color: "blue",
         pb: 4,
       },
       h3: {
-        color: "green",
         pb: 2,
       },
       p: {

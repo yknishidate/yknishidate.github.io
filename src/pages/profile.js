@@ -36,8 +36,10 @@ const ProfilePage = () => {
   return (
     <Layout>
       <Seo />
-      <Box mb={8}>
-        <Flex align={"top"} mb={16}>
+
+      {/* section */}
+      <Box mb={16}>
+        <Flex align={"top"}>
           <Box>
             <Heading as={"h1"} size={"xl"}>
               西舘 祐樹 / Yuki Nishidate
@@ -93,7 +95,10 @@ const ProfilePage = () => {
             />
           </Box>
         </Flex>
+      </Box>
 
+      {/* section */}
+      <Box>
         <Heading as={"h2"} size={"lg"}>
           活動
         </Heading>
