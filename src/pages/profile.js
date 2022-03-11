@@ -98,7 +98,7 @@ const ProfilePage = () => {
       </Box>
 
       {/* section */}
-      <Box>
+      <Box mb={16}>
         <Heading as={"h2"} size={"lg"}>
           活動
         </Heading>
@@ -150,6 +150,38 @@ const ProfilePage = () => {
               </Td>
               <Td px={4} py={2}>
                 バンダイナムコ研究所データサイエンスチャレンジ優勝
+              </Td>
+            </Tr>
+          </Tbody>
+        </Table>
+      </Box>
+
+      {/* section */}
+      <Box>
+        <Heading as={"h2"} size={"lg"}>
+          発表
+        </Heading>
+        <Table variant={"unstyled"} borderLeft={"solid 1px gray"}>
+          <Tbody>
+            <Tr>
+              <Td px={4} py={2}>
+                2022
+              </Td>
+              <Td px={4} py={2}>
+                <u>西舘祐樹</u>
+                ，藤代一成：「高速プライマリレイ走査のためのアフィン変換レイアライメント」，情報処理学会第84回全国大会，6ZF-01，
+                <b>学生奨励賞</b>
+              </Td>
+            </Tr>
+
+            <Tr>
+              <Td px={4} py={2}>
+                2022
+              </Td>
+              <Td px={4} py={2}>
+                <u>西舘祐樹</u>
+                ，藤代一成：「プライマリレイ走査高速化のためのアフィン変換レイアライメント―Embreeを用いた実装―」，情報処理学会研究速報，Vol.
+                2022-CG-185
               </Td>
             </Tr>
           </Tbody>
