@@ -13,6 +13,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Card from "../components/card";
+import Fade from "react-reveal/Fade";
 import { Link } from "gatsby";
 
 const IndexPage = () => {
@@ -81,7 +82,11 @@ const IndexPage = () => {
         </Heading>
         <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4}>
           {mdxs.map((mdx) => {
-            return <Card product={mdx}></Card>;
+            return (
+              <Fade bottom duration={500} delay={100} distance="30px">
+                <Card product={mdx}></Card>
+              </Fade>
+            );
           })}
         </SimpleGrid>
       </Box>
