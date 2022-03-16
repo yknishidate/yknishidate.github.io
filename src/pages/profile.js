@@ -17,20 +17,12 @@ import {
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-
-const EmojiBlock = ({ code, children }) => {
-  return (
-    <HStack align="baseline">
-      <Box boxSize={"1em"}>
-        <Image
-          src={`https://twemoji.maxcdn.com/v/latest/svg/${code}.svg`}
-          display="inline"
-        />
-      </Box>
-      {children}
-    </HStack>
-  );
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBuildingColumns,
+  faBriefcase,
+  faLink,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ProfilePage = () => {
   return (
@@ -47,38 +39,50 @@ const ProfilePage = () => {
             <Text>コンピュータグラフィックスを勉強中の大学生です</Text>
 
             <Box mb={8}>
-              <EmojiBlock code="1f393">
-                <Text>慶應義塾大学 理工学部 情報工学科4年</Text>
-              </EmojiBlock>
-              <EmojiBlock code="1f4bb">
-                <Text>R&Dエンジニア @ DIGITAL FRONTIER INC. (2019-2021)</Text>
-              </EmojiBlock>
-              <EmojiBlock code="1f4bb">
-                <Text>3Dデザイナー @ 家具広告制作会社 (2018)</Text>
-              </EmojiBlock>
-              <EmojiBlock code="1f517">
-                <HStack>
-                  <Link
-                    href="https://twitter.com/yknishidate"
-                    isExternal
-                    color={"link"}
-                    _focus={{ _focus: "none" }}
-                  >
-                    <Text>{"Twitter"}</Text>
-                  </Link>
-                  <Text>{" / "}</Text>
-                  <Link
-                    href="https://github.com/yknishidate"
-                    isExternal
-                    color={"link"}
-                    _focus={{ _focus: "none" }}
-                  >
-                    <Text>{"GitHub"}</Text>
-                  </Link>
-                  <Text>{" / "}</Text>
-                  <Text>{"yuki_nishidate[at]keio.jp"}</Text>
-                </HStack>
-              </EmojiBlock>
+              <Text>
+                <Box color={"blue.300"} display={"inline"} mr={2}>
+                  <FontAwesomeIcon icon={faBuildingColumns} fixedWidth={true} />
+                </Box>
+                慶應義塾大学 理工学部 情報工学科4年
+              </Text>
+              <Text>
+                <Box color={"blue.300"} display={"inline"} mr={2}>
+                  <FontAwesomeIcon icon={faBriefcase} fixedWidth={true} />
+                </Box>
+                R&Dエンジニア @ DIGITAL FRONTIER INC. (2019-2021)
+              </Text>
+              <Text>
+                <Box color={"blue.300"} display={"inline"} mr={2}>
+                  <FontAwesomeIcon icon={faBriefcase} fixedWidth={true} />
+                </Box>
+                3Dデザイナー @ 家具広告制作会社 (2018)
+              </Text>
+              <Text>
+                <Box color={"blue.300"} display={"inline"} mr={2}>
+                  <FontAwesomeIcon icon={faLink} fixedWidth={true} />
+                </Box>
+                <Link
+                  href="https://twitter.com/yknishidate"
+                  isExternal
+                  fontWeight={"bold"}
+                  textDecoration={"underline"}
+                  _focus={{ _focus: "none" }}
+                >
+                  Twitter
+                </Link>
+                {" / "}
+                <Link
+                  href="https://github.com/yknishidate"
+                  isExternal
+                  fontWeight={"bold"}
+                  textDecoration={"underline"}
+                  _focus={{ _focus: "none" }}
+                >
+                  GitHub
+                </Link>
+                {" / "}
+                {"yuki_nishidate[at]keio.jp"}
+              </Text>
             </Box>
           </Box>
 

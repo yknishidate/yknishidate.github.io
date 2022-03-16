@@ -83,9 +83,9 @@ const IndexPage = () => {
         <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4}>
           {mdxs.map((mdx) => {
             return (
-              <Fade bottom duration={500} delay={100} distance="30px">
-                <Card product={mdx}></Card>
-              </Fade>
+              // <Fade bottom duration={500} delay={100} distance="30px">
+              // </Fade>
+              <Card product={mdx}></Card>
             );
           })}
         </SimpleGrid>
