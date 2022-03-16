@@ -10,7 +10,7 @@ const theme = extendTheme({
       body: {
         overflowY: "scroll",
         backgroundColor: "#191919",
-        color: "#eee",
+        color: "#d8d8d8",
       },
       h1: {
         pb: 4,

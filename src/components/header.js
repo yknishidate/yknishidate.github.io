@@ -27,11 +27,6 @@ const Header = () => {
             Nishiki
           </Heading>
         </Link>
-        <Spacer />
-        <Box mr={8}>
-          <Link to="/">Home</Link>
-        </Box>
-        <Link to="/profile">Profile</Link>
       </Container>
     </Box>
   );

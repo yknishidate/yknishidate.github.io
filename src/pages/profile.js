@@ -161,7 +161,7 @@ const ProfilePage = () => {
       </Box>
 
       {/* section */}
-      <Box>
+      <Box mb={16}>
         <Heading as={"h2"} size={"lg"}>
           発表
         </Heading>
