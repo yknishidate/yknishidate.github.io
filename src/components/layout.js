@@ -12,18 +12,6 @@ const theme = extendTheme({
         backgroundColor: "#191919",
         color: "#d8d8d8",
       },
-      h1: {
-        pb: 4,
-      },
-      h2: {
-        pb: 4,
-      },
-      h3: {
-        pb: 2,
-      },
-      p: {
-        py: 1,
-      },
     },
   },
   fonts: {

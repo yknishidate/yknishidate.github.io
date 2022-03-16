@@ -45,16 +45,24 @@ const Post = ({ pageContext }) => {
     <Layout>
       <Seo />
 
-      <Text>{product.frontmatter.date}</Text>
-      <Heading>{product.frontmatter.title}</Heading>
+      <Text py={2}>{product.frontmatter.date}</Text>
+      <Heading as={"h1"} pb={4} size="xl">
+        {product.frontmatter.title}
+      </Heading>
       <Properties product={product}></Properties>
 
       <MDXProvider
         components={{
-          h1: (props) => <Heading {...props} as={"h1"} pt={8} size="xl" />,
-          h2: (props) => <Heading {...props} as={"h2"} pt={8} size="lg" />,
-          h3: (props) => <Heading {...props} as={"h3"} pt={4} size="md" />,
-          p: (props) => <Text {...props} />,
+          h1: (props) => (
+            <Heading {...props} as={"h1"} pt={8} pb={2} size="xl" />
+          ),
+          h2: (props) => (
+            <Heading {...props} as={"h2"} pt={6} pb={2} size="lg" />
+          ),
+          h3: (props) => (
+            <Heading {...props} as={"h3"} pt={4} pb={2} size="md" />
+          ),
+          p: (props) => <Text {...props} py={2} />,
           pre: (props) => (
             <Code {...props} display={"block"} whiteSpace={"pre"} p={4} />
           ),
