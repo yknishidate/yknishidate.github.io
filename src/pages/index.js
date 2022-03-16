@@ -15,12 +15,15 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Card from "../components/card";
 import Fade from "react-reveal/Fade";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuildingColumns,
   faBriefcase,
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
+
+config.autoAddCss = false;
 
 const Title = ({ children }) => {
   return (
