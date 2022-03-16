@@ -55,7 +55,7 @@ const IndexPage = () => {
               thumb {
                 publicURL
                 childImageSharp {
-                  gatsbyImageData(width: 400, height: 200)
+                  gatsbyImageData(width: 200, height: 200)
                 }
               }
             }
