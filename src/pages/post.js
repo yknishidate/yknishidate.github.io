@@ -69,13 +69,14 @@ const Post = ({ pageContext }) => {
           table: Table,
           tr: Tr,
           td: Td,
-          ul: (props) => <Text {...props} pl={2} />,
+          ul: (props) => <Text {...props} pl={2} py={2} />,
           a: (props) => (
             <Link
               {...props}
               color={"link"}
               isExternal
               _focus={{ _focus: "none" }}
+              textDecoration={"underline"}
             />
           ),
         }}

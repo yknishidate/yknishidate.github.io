@@ -23,7 +23,7 @@ const Card = ({ product }) => {
         overflow={"hidden"}
         bgColor={"#282828"}
       >
-        <HStack alignItems={"top"}>
+        <HStack alignItems={"top"} zIndex={1}>
           <GatsbyImage image={image} alt={"image"} />
           <Container p={2}>
             <Text>{date}</Text>

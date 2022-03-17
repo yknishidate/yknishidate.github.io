@@ -20,7 +20,7 @@ const theme = extendTheme({
   },
   colors: {
     background: "#191919",
-    shadow: "#111",
+    shadow: "#000",
   },
 });
 
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Container maxW="container.md" pt={32} minH={"100vh"}>
+      <Container maxW="container.md" pt={24} minH={"100vh"}>
         {children}
         <Footer />
       </Container>
