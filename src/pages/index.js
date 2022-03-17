@@ -74,7 +74,7 @@ const IndexPage = () => {
       <Box>
         <Title>西舘 祐樹 - Yuki Nishidate</Title>
         <Text px={0} py={2}>
-          コンピュータグラフィックスを勉強中の大学生です
+          コンピュータグラフィックスを勉強しています
         </Text>
 
         <Table variant={"unstyled"} placement="bottom">
@@ -147,7 +147,34 @@ const IndexPage = () => {
       </Box>
 
       <Box mt={8}>
-        <SectionTitle>活動</SectionTitle>
+        <SectionTitle>発表</SectionTitle>
+        <Table variant={"unstyled"}>
+          <Tbody>
+            <Tr>
+              <Td px={0} py={2}>
+                2022
+              </Td>
+              <Td pr={0} pl={4} py={2} w="100%">
+                西舘祐樹，藤代一成：「高速プライマリレイ走査のためのアフィン変換レイアライメント」，情報処理学会第84回全国大会，6ZF-01，
+                <b>学生奨励賞</b>
+              </Td>
+            </Tr>
+
+            <Tr>
+              <Td px={0} py={2}>
+                2022
+              </Td>
+              <Td pr={0} pl={4} py={2} w="100%">
+                西舘祐樹，藤代一成：「プライマリレイ走査高速化のためのアフィン変換レイアライメント―Embreeを用いた実装―」，情報処理学会研究速報，Vol.
+                2022-CG-185
+              </Td>
+            </Tr>
+          </Tbody>
+        </Table>
+      </Box>
+
+      <Box mt={8}>
+        <SectionTitle>他の活動</SectionTitle>
         <Table variant={"unstyled"} placement="bottom">
           <Tbody>
             <Tr>
@@ -208,34 +235,7 @@ const IndexPage = () => {
       </Box>
 
       <Box mt={8}>
-        <SectionTitle>発表</SectionTitle>
-        <Table variant={"unstyled"}>
-          <Tbody>
-            <Tr>
-              <Td px={0} py={2}>
-                2022
-              </Td>
-              <Td pr={0} pl={4} py={2} w="100%">
-                西舘祐樹，藤代一成：「高速プライマリレイ走査のためのアフィン変換レイアライメント」，情報処理学会第84回全国大会，6ZF-01，
-                <b>学生奨励賞</b>
-              </Td>
-            </Tr>
-
-            <Tr>
-              <Td px={0} py={2}>
-                2022
-              </Td>
-              <Td pr={0} pl={4} py={2} w="100%">
-                西舘祐樹，藤代一成：「プライマリレイ走査高速化のためのアフィン変換レイアライメント―Embreeを用いた実装―」，情報処理学会研究速報，Vol.
-                2022-CG-185
-              </Td>
-            </Tr>
-          </Tbody>
-        </Table>
-      </Box>
-
-      <Box mt={8}>
-        <SectionTitle>創作物</SectionTitle>
+        <SectionTitle>制作物</SectionTitle>
         <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4} py={2}>
           {mdxs.map((mdx) => {
             return (
