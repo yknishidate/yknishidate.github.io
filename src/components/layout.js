@@ -1,6 +1,5 @@
 import * as React from "react";
 import { ChakraProvider, Container, extendTheme } from "@chakra-ui/react";
-import "@fontsource/m-plus-1";
 import Header from "../components/header";
 import Footer from "./footer";
 
