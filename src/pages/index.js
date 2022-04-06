@@ -155,7 +155,7 @@ const IndexPage = () => {
                 2022
               </Td>
               <Td pr={0} pl={4} py={2} w="100%">
-                西舘祐樹，藤代一成：「高速プライマリレイ走査のためのアフィン変換レイアライメント」，情報処理学会第84回全国大会，6ZF-01，
+                西舘祐樹，藤代一成：「高速プライマリレイ走査のためのアフィン変換レイアライメント」，情報処理学会第84回全国大会，講演論文集(4)，
                 <b>学生奨励賞</b>
               </Td>
             </Tr>
@@ -166,7 +166,7 @@ const IndexPage = () => {
               </Td>
               <Td pr={0} pl={4} py={2} w="100%">
                 西舘祐樹，藤代一成：「プライマリレイ走査高速化のためのアフィン変換レイアライメント―Embreeを用いた実装―」，情報処理学会研究速報，Vol.
-                2022-CG-185
+                2022-CG-185，<b>優秀研究発表賞</b>
               </Td>
             </Tr>
           </Tbody>
@@ -238,11 +238,7 @@ const IndexPage = () => {
         <SectionTitle>制作物</SectionTitle>
         <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4} py={2}>
           {mdxs.map((mdx) => {
-            return (
-              <Fade bottom duration={500} delay={100} distance="30px">
-                <Card product={mdx}></Card>
-              </Fade>
-            );
+            return <Card product={mdx}></Card>;
           })}
         </SimpleGrid>
       </Box>
