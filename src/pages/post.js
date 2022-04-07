@@ -15,7 +15,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/layout";
 import { MDXProvider } from "@mdx-js/react";
 import Seo from "../components/seo";
-import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -50,12 +49,9 @@ const Post = ({ pageContext }) => {
       <Seo />
 
       <Text py={2}>{product.frontmatter.date}</Text>
-      <HStack>
-        <Heading as={"h1"} pb={4} size="xl">
-          {product.frontmatter.title}
-        </Heading>
-        <FontAwesomeIcon icon={faGithub} />
-      </HStack>
+      <Heading as={"h1"} pb={4} size="xl">
+        {product.frontmatter.title}
+      </Heading>
       <Properties product={product}></Properties>
 
       <MDXProvider
