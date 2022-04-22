@@ -10,7 +10,7 @@ const Header = () => {
       w="100%"
       bg={"background"}
       zIndex={1}
-      borderBottom={"2px"}
+      borderBottom={"1px"}
       borderColor={"shadow"}
     >
       <Container

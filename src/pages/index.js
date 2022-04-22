@@ -10,11 +10,11 @@ import {
   Tbody,
   Tr,
   Td,
+  textDecoration,
 } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Card from "../components/card";
-import Fade from "react-reveal/Fade";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -35,7 +35,7 @@ const Title = ({ children }) => {
 
 const SectionTitle = ({ children }) => {
   return (
-    <Heading as={"h3"} size={"md"} pt={4} pb={2}>
+    <Heading as={"h2"} size={"lg"} pt={4} pb={2}>
       {children}
     </Heading>
   );
@@ -108,7 +108,7 @@ const IndexPage = () => {
                 </Box>
               </Td>
               <Td pr={0} pl={4} py={2} w="100%">
-                3Dデザイナー @ 家具広告制作会社 (2018)
+                3Dデザイナー (2018)
               </Td>
             </Tr>
 
