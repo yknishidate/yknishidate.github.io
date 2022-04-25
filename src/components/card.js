@@ -17,14 +17,22 @@ const Card = ({ product }) => {
 
   return (
     <Link to={`/post/${slug}/`}>
-      <GridItem
-        height={"100%"}
-        rounded={"lg"}
-        overflow={"hidden"}
-        bgColor={"#282828"}
-      >
-        <HStack alignItems={"top"} zIndex={1}>
-          <GatsbyImage image={image} alt={"image"} />
+      <GridItem>
+        <HStack
+          height={"100%"}
+          bgColor={"#282828"}
+          alignItems={"top"}
+          rounded={"8px"}
+          overflow={"hidden"}
+        >
+          <GatsbyImage
+            image={image}
+            alt={"image"}
+            imgStyle={{
+              borderTopLeftRadius: "8px",
+              borderBottomLeftRadius: "8px",
+            }}
+          />
           <Container p={2}>
             <Text>{date}</Text>
             <Heading as={"h3"} size={"md"}>
