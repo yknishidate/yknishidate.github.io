@@ -9,14 +9,11 @@ import {
   Td,
   Link,
   Box,
-  HStack,
 } from "@chakra-ui/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/layout";
 import { MDXProvider } from "@mdx-js/react";
 import Seo from "../components/seo";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Properties = ({ product }) => {
   return (
