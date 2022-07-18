@@ -15,6 +15,8 @@ const Video = ({ src }) => {
           filter: "drop-shadow(0px 0px rgba(0,0,0,0))",
           border: "1px solid #333",
           outline: "none",
+          marginTop: "1rem",
+          marginBottom: "1rem",
         }}
       ></video>
     </div>
