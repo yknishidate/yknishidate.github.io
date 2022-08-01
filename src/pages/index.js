@@ -244,6 +244,23 @@ const IndexPage = () => {
                 バンダイナムコ研究所データサイエンスチャレンジ優勝
               </Td>
             </Tr>
+            
+            <Tr>
+              <Td px={0} py={2}>
+                2022
+              </Td>
+              <Td pr={0} pl={4} py={2} w="100%">
+                <Link
+                  href="https://www.ipsj.or.jp/award/yamashita2022.html#:~:text=%E8%A5%BF%E8%88%98%E3%80%80%E7%A5%90%E6%A8%B9,%E3%81%84%E3%81%9F%E5%AE%9F%E8%A3%85%E2%80%94"
+                  isExternal
+                  fontWeight={"bold"}
+                  textDecoration={"underline"}
+                  _focus={{ _focus: "none" }}
+                >
+                  {"情報処理学会 山下記念研究賞受賞"}
+                </Link>
+              </Td>
+            </Tr>
           </Tbody>
         </Table>
       </Box>
