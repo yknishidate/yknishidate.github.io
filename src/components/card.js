@@ -35,7 +35,7 @@ const Card = ({ product }) => {
           />
           <Container p={2}>
             <Text>{date}</Text>
-            <Heading as={"h3"} size={"md"}>
+            <Heading as={"h3"} size={"md"} lineHeight={1.5}>
               {title}
             </Heading>
             {tags.map((tag) => {
