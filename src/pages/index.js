@@ -186,18 +186,10 @@ const IndexPage = () => {
           <Tbody>
             <TrWithYear year={"2022"}>
               <ExternalLink href="https://connpass.com/event/237956/">
-                {"バンダイナムコ研究所・データサイエンス・チャレンジ振り返り会"}
+                {"バンダイナムコ研究所データサイエンスチャレンジ振り返り会"}
               </ExternalLink>
               <br />
               {"優勝解法解説"}
-            </TrWithYear>
-
-            <TrWithYear year={"2022"}>
-              <ExternalLink href="https://www.khronos.org/events/japan-vulkan-meetup-september-9-2022">
-                {"Japan Vulkan Meetup"}
-              </ExternalLink>
-              <br />
-              {'Speaker of "Vulkan from a Student / Researcher\'s Perspective"'}
             </TrWithYear>
 
             <TrWithYear year={"2022"}>
@@ -206,6 +198,14 @@ const IndexPage = () => {
               </ExternalLink>
               <br />
               {"Sampling and Denoisingセッション担当"}
+            </TrWithYear>
+
+            <TrWithYear year={"2022"}>
+              <ExternalLink href="https://www.khronos.org/events/japan-vulkan-meetup-september-9-2022">
+                {"Japan Vulkan Meetup"}
+              </ExternalLink>
+              <br />
+              {'Speaker of "Vulkan from a Student / Researcher\'s Perspective"'}
             </TrWithYear>
           </Tbody>
         </Table>
