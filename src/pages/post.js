@@ -7,11 +7,11 @@ import {
   Table,
   Tr,
   Td,
-  Link,
   Box,
 } from "@chakra-ui/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/layout";
+import ExternalLink from "../components/link";
 import { MDXProvider } from "@mdx-js/react";
 import Seo from "../components/seo";
 
@@ -62,23 +62,15 @@ const Post = ({ pageContext }) => {
           h3: (props) => (
             <Heading {...props} as={"h3"} pt={4} pb={2} size="md" />
           ),
-          p: (props) => <Text {...props} py={2} />,
+          p: (props) => <Text {...props} py={1} />,
           pre: (props) => (
             <Code {...props} display={"block"} whiteSpace={"pre"} p={4} />
           ),
           table: Table,
           tr: Tr,
           td: Td,
-          ul: (props) => <Text {...props} pl={2} py={2} />,
-          a: (props) => (
-            <Link
-              {...props}
-              color={"link"}
-              isExternal
-              _focus={{ _focus: "none" }}
-              textDecoration={"underline"}
-            />
-          ),
+          ul: (props) => <Text {...props} pl={2} />,
+          a: (props) => <ExternalLink {...props} />,
         }}
       >
         <MDXRenderer>{product.body}</MDXRenderer>

@@ -5,7 +5,6 @@ import {
   Text,
   Box,
   SimpleGrid,
-  Link,
   Table,
   Tbody,
   Tr,
@@ -14,6 +13,7 @@ import {
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Card from "../components/card";
+import ExternalLink from "../components/link";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -81,21 +81,6 @@ const TrWithYear = ({ children, year }) => {
       <TdLeft>{year}</TdLeft>
       <TdRight>{children}</TdRight>
     </Tr>
-  );
-};
-
-const ExternalLink = ({ children, href }) => {
-  return (
-    <Link
-      href={href}
-      isExternal
-      fontWeight={"bold"}
-      textDecoration={"underline"}
-      _focus={{ _focus: "none" }}
-      textUnderlineOffset={"0.15em"}
-    >
-      {children}
-    </Link>
   );
 };
 
@@ -171,7 +156,7 @@ const IndexPage = () => {
                 "西舘祐樹 藤代一成：「高速プライマリレイ走査のためのアフィン変換レイアライメント」 "
               }
               <br />
-              {"@ 情報処理学会 第84回全国大会 "}
+              {"情報処理学会 第84回全国大会 "}
               <ExternalLink href="https://www.ipsj.or.jp/award/taikaigakusei.html#:~:text=%E8%A5%BF%E8%88%98%E3%80%80%E7%A5%90%E6%A8%B9%E5%90%9B%EF%BC%88%E6%85%B6%E6%87%89%E7%BE%A9%E5%A1%BE%E5%A4%A7%E5%AD%A6%EF%BC%89">
                 学生奨励賞
               </ExternalLink>
@@ -182,7 +167,7 @@ const IndexPage = () => {
                 "西舘祐樹 藤代一成：「プライマリレイ走査高速化のためのアフィン変換レイアライメント―Embreeを用いた実装―」 "
               }
               <br />
-              {"@ 第185回 CGVI研究発表会 "}
+              {"第185回 CGVI研究発表会 "}
               <ExternalLink href="https://cgvi.jp/info/bestpapers/#185#:~:text=%E8%A5%BF%E8%88%98%20%E7%A5%90%E6%A8%B9">
                 優秀研究発表賞
               </ExternalLink>
@@ -190,6 +175,37 @@ const IndexPage = () => {
               <ExternalLink href="https://cgvi.jp/info/%e5%ad%a6%e7%94%9f%e7%99%ba%e8%a1%a8%e8%b3%9e/#185#:~:text=%E8%A5%BF%E8%88%98%20%E7%A5%90%E6%A8%B9">
                 学生発表賞
               </ExternalLink>
+            </TrWithYear>
+          </Tbody>
+        </Table>
+      </Box>
+
+      <Box mt={8}>
+        <SectionTitle>イベント発表</SectionTitle>
+        <Table variant={"unstyled"}>
+          <Tbody>
+            <TrWithYear year={"2022"}>
+              <ExternalLink href="https://connpass.com/event/237956/">
+                {"バンダイナムコ研究所・データサイエンス・チャレンジ振り返り会"}
+              </ExternalLink>
+              <br />
+              {"優勝解法解説"}
+            </TrWithYear>
+
+            <TrWithYear year={"2022"}>
+              <ExternalLink href="https://www.khronos.org/events/japan-vulkan-meetup-september-9-2022">
+                {"Japan Vulkan Meetup"}
+              </ExternalLink>
+              <br />
+              {'Speaker of "Vulkan from a Student / Researcher\'s Perspective"'}
+            </TrWithYear>
+
+            <TrWithYear year={"2022"}>
+              <ExternalLink href="https://siggraph.xyz/sa2021/">
+                {"SIGGRAPH Asia 2021勉強会"}
+              </ExternalLink>
+              <br />
+              {"Sampling and Denoisingセッション担当"}
             </TrWithYear>
           </Tbody>
         </Table>
@@ -226,37 +242,6 @@ const IndexPage = () => {
               <ExternalLink href="https://www.ipsj.or.jp/award/yamashita2022.html#:~:text=%E8%A5%BF%E8%88%98%E3%80%80%E7%A5%90%E6%A8%B9,%E3%81%84%E3%81%9F%E5%AE%9F%E8%A3%85%E2%80%94">
                 {"山下記念研究賞受賞"}
               </ExternalLink>
-            </TrWithYear>
-          </Tbody>
-        </Table>
-      </Box>
-
-      <Box mt={8}>
-        <SectionTitle>イベント発表</SectionTitle>
-        <Table variant={"unstyled"}>
-          <Tbody>
-            <TrWithYear year={"2022"}>
-              <ExternalLink href="https://connpass.com/event/237956/">
-                {"バンダイナムコ研究所・データサイエンス・チャレンジ振り返り会"}
-              </ExternalLink>
-              <br />
-              {"優勝解法解説"}
-            </TrWithYear>
-
-            <TrWithYear year={"2022"}>
-              <ExternalLink href="https://www.khronos.org/events/japan-vulkan-meetup-september-9-2022">
-                {"Japan Vulkan Meetup"}
-              </ExternalLink>
-              <br />
-              {'Speaker of "Vulkan from a Student / Researcher\'s Perspective"'}
-            </TrWithYear>
-
-            <TrWithYear year={"2022"}>
-              <ExternalLink href="https://siggraph.xyz/sa2021/">
-                {"SIGGRAPH Asia 2021勉強会"}
-              </ExternalLink>
-              <br />
-              {"Sampling and Denoisingセッション担当"}
             </TrWithYear>
           </Tbody>
         </Table>
