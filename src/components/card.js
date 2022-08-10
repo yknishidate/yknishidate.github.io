@@ -4,11 +4,27 @@ import {
   Text,
   GridItem,
   Container,
-  Badge,
   HStack,
+  Badge,
 } from "@chakra-ui/react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+
+const Tag = ({ children }) => {
+  return (
+    <Badge
+      mr={2}
+      my={1}
+      bg={"gray.700"}
+      color={"gray.200"}
+      textTransform={"none"}
+      px={1.5}
+      py={0.5}
+    >
+      {children}
+    </Badge>
+  );
+};
 
 const Card = ({ product }) => {
   const { slug } = product;
@@ -35,21 +51,11 @@ const Card = ({ product }) => {
           />
           <Container p={2}>
             <Text>{date}</Text>
-            <Heading as={"h3"} size={"md"} lineHeight={1.5}>
+            <Heading as={"h3"} size={"md"}>
               {title}
             </Heading>
             {tags.map((tag) => {
-              return (
-                <Badge
-                  mr={2}
-                  bg={"gray.700"}
-                  color="gray.200"
-                  textTransform={"none"}
-                  px={2}
-                >
-                  {tag}
-                </Badge>
-              );
+              return <Tag>{tag}</Tag>;
             })}
           </Container>
         </HStack>

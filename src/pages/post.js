@@ -15,22 +15,27 @@ import ExternalLink from "../components/link";
 import { MDXProvider } from "@mdx-js/react";
 import Seo from "../components/seo";
 
+const Tag = ({ children }) => {
+  return (
+    <Badge
+      mr={2}
+      my={1}
+      bg={"gray.700"}
+      color={"gray.200"}
+      textTransform={"none"}
+      px={1.5}
+      py={0.5}
+    >
+      {children}
+    </Badge>
+  );
+};
+
 const Properties = ({ product }) => {
   return (
     <Box mb={8}>
       {product.frontmatter.tags.map((tag) => {
-        return (
-          <Badge
-            mr={2}
-            bg={"gray.700"}
-            color="gray.200"
-            textTransform={"none"}
-            px={2}
-            py={1}
-          >
-            {tag}
-          </Badge>
-        );
+        return <Tag>{tag}</Tag>;
       })}
     </Box>
   );
