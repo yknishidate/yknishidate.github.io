@@ -219,13 +219,13 @@ const IndexPage = () => {
               DHU U-18アーティストコンテストCG部門優秀賞受賞
             </TrWithYear>
 
-            <TrWithYear year={"2018"}>基本情報技術者試験合格</TrWithYear>
+            <TrWithYear year={"2017"}>基本情報技術者試験合格</TrWithYear>
 
-            <TrWithYear year={"2019"}>
+            <TrWithYear year={"2018"}>
               CGエンジニア検定エキスパート合格
             </TrWithYear>
 
-            <TrWithYear year={"2019"}>
+            <TrWithYear year={"2018"}>
               CGクリエイター検定エキスパート合格
             </TrWithYear>
 
