@@ -75,10 +75,10 @@ const TrWithIcon = ({ children, icon }) => {
   );
 };
 
-const TrWithYear = ({ children, year }) => {
+const TrWithYear = ({ children, date }) => {
   return (
     <Tr>
-      <TdLeft>{year}</TdLeft>
+      <TdLeft>{date}</TdLeft>
       <TdRight>{children}</TdRight>
     </Tr>
   );
@@ -151,7 +151,7 @@ const IndexPage = () => {
         <SectionTitle>研究発表</SectionTitle>
         <Table variant={"unstyled"}>
           <Tbody>
-            <TrWithYear year={"2022"}>
+            <TrWithYear date={"2022/03"}>
               {
                 "西舘祐樹 藤代一成：「高速プライマリレイ走査のためのアフィン変換レイアライメント」 "
               }
@@ -162,7 +162,7 @@ const IndexPage = () => {
               </ExternalLink>
             </TrWithYear>
 
-            <TrWithYear year={"2022"}>
+            <TrWithYear date={"2022/03"}>
               {
                 "西舘祐樹 藤代一成：「プライマリレイ走査高速化のためのアフィン変換レイアライメント―Embreeを用いた実装―」 "
               }
@@ -177,12 +177,20 @@ const IndexPage = () => {
               </ExternalLink>
             </TrWithYear>
 
-            <TrWithYear year={"2022"}>
+            <TrWithYear date={"2022/10"}>
               {
                 "西舘祐樹 藤代一成：「レイ走査高速化のためのアフィン変換レイアライメント」 "
               }
               <br />
-              {"Visual Computing 2022（査読付き）"}
+              {"Visual Computing 2022"}
+            </TrWithYear>
+
+            <TrWithYear date={"2022/12"}>
+              {
+                "Yuki Nishidate, Issei Fujishiro：「Affine-Transformed Ray Alignment for Fast Ray Traversal」 "
+              }
+              <br />
+              {"SIGGRAPH Asia 2022, Technical Communications"}
             </TrWithYear>
           </Tbody>
         </Table>
@@ -192,7 +200,7 @@ const IndexPage = () => {
         <SectionTitle>イベント発表</SectionTitle>
         <Table variant={"unstyled"}>
           <Tbody>
-            <TrWithYear year={"2022"}>
+            <TrWithYear date={"2022/03"}>
               <ExternalLink href="https://connpass.com/event/237956/">
                 {"バンダイナムコ研究所データサイエンスチャレンジ振り返り会"}
               </ExternalLink>
@@ -200,15 +208,7 @@ const IndexPage = () => {
               {"優勝解法解説"}
             </TrWithYear>
 
-            <TrWithYear year={"2022"}>
-              <ExternalLink href="https://siggraph.xyz/sa2021/">
-                {"SIGGRAPH Asia 2021勉強会"}
-              </ExternalLink>
-              <br />
-              {"Sampling and Denoisingセッション担当"}
-            </TrWithYear>
-
-            <TrWithYear year={"2022"}>
+            <TrWithYear date={"2022/09"}>
               <ExternalLink href="https://www.khronos.org/events/japan-vulkan-meetup-september-9-2022">
                 {"Japan Vulkan Meetup"}
               </ExternalLink>
@@ -223,29 +223,29 @@ const IndexPage = () => {
         <SectionTitle>資格・受賞など</SectionTitle>
         <Table variant={"unstyled"} placement="bottom">
           <Tbody>
-            <TrWithYear year={"2017"}>
+            <TrWithYear date={"2017/02"}>
               DHU U-18アーティストコンテストCG部門優秀賞受賞
             </TrWithYear>
 
-            <TrWithYear year={"2017"}>基本情報技術者試験合格</TrWithYear>
+            <TrWithYear date={"2017/04"}>基本情報技術者試験合格</TrWithYear>
 
-            <TrWithYear year={"2018"}>
+            <TrWithYear date={"2018/12"}>
               CGエンジニア検定エキスパート合格
             </TrWithYear>
 
-            <TrWithYear year={"2018"}>
+            <TrWithYear date={"2018/12"}>
               CGクリエイター検定エキスパート合格
             </TrWithYear>
 
-            <TrWithYear year={"2019"}>
+            <TrWithYear date={"2019/02"}>
               文部科学大臣賞受賞（CGエンジニア検定満点による）
             </TrWithYear>
 
-            <TrWithYear year={"2022"}>
+            <TrWithYear date={"2022/01"}>
               バンダイナムコ研究所データサイエンスチャレンジ優勝
             </TrWithYear>
 
-            <TrWithYear year={"2022"}>
+            <TrWithYear date={"2022/08"}>
               {"情報処理学会 "}
               <ExternalLink href="https://www.ipsj.or.jp/award/yamashita2022.html#:~:text=%E8%A5%BF%E8%88%98%E3%80%80%E7%A5%90%E6%A8%B9,%E3%81%84%E3%81%9F%E5%AE%9F%E8%A3%85%E2%80%94">
                 {"山下記念研究賞受賞"}
