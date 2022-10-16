@@ -176,6 +176,14 @@ const IndexPage = () => {
                 学生発表賞
               </ExternalLink>
             </TrWithYear>
+
+            <TrWithYear year={"2022"}>
+              {
+                "西舘祐樹 藤代一成：「レイ走査高速化のためのアフィン変換レイアライメント」 "
+              }
+              <br />
+              {"Visual Computing 2022（査読付き）"}
+            </TrWithYear>
           </Tbody>
         </Table>
       </Box>
