@@ -182,7 +182,10 @@ const IndexPage = () => {
                 "西舘祐樹 藤代一成：「レイ走査高速化のためのアフィン変換レイアライメント」 "
               }
               <br />
-              {"Visual Computing 2022"}
+              {"Visual Computing 2022 "}
+              <ExternalLink href="https://cgvi.jp/info/%E5%AD%A6%E7%94%9F%E7%99%BA%E8%A1%A8%E8%B3%9E/#vc2022:~:text=%E5%A4%89%E6%8F%9B%E3%83%AC%E3%82%A4%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%0A%E2%97%8B-,%E8%A5%BF%E8%88%98%20%E7%A5%90%E6%A8%B9,-%EF%BC%88%E6%85%B6%E6%87%89%E7%BE%A9">
+                学生発表賞
+              </ExternalLink>
             </TrWithYear>
 
             <TrWithYear date={"2022/12"}>
