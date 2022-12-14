@@ -132,7 +132,18 @@ const IndexPage = () => {
               慶應義塾大学大学院理工学研究科修士1年
             </TrWithIcon>
             <TrWithIcon icon={faBriefcase}>
-              R&Dエンジニア @ DIGITAL FRONTIER INC. (2019-2021)
+              {"Consultant (independent) for "}
+              <ExternalLink href="https://www.khronos.org/">
+                The Khronos Group Inc.
+              </ExternalLink>
+              {" (2021-)"}
+            </TrWithIcon>
+            <TrWithIcon icon={faBriefcase}>
+              {"R&Dエンジニア @ "}
+              <ExternalLink href="https://www.dfx.co.jp/">
+                DIGITAL FRONTIER INC.
+              </ExternalLink>
+              {" (2019-2021)"}
             </TrWithIcon>
             <TrWithIcon icon={faBriefcase}>3Dデザイナー (2018)</TrWithIcon>
             <TrWithIcon icon={faLink}>
