@@ -1,45 +1,11 @@
 import * as React from "react";
-import {
-  Heading,
-  Text,
-  Code,
-  Badge,
-  Table,
-  Tr,
-  Td,
-  Box,
-} from "@chakra-ui/react";
+import { Heading, Text, Code, Table, Tr, Td, Box } from "@chakra-ui/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/layout";
 import ExternalLink from "../components/link";
 import { MDXProvider } from "@mdx-js/react";
 import Seo from "../components/seo";
-
-const Tag = ({ children }) => {
-  return (
-    <Badge
-      mr={2}
-      my={1}
-      bg={"gray.700"}
-      color={"gray.200"}
-      textTransform={"none"}
-      px={1.5}
-      py={0.5}
-    >
-      {children}
-    </Badge>
-  );
-};
-
-const Properties = ({ product }) => {
-  return (
-    <Box mb={8}>
-      {product.frontmatter.tags.map((tag) => {
-        return <Tag>{tag}</Tag>;
-      })}
-    </Box>
-  );
-};
+import Tag from "../components/tag";
 
 const Post = ({ pageContext }) => {
   const { product } = pageContext;
@@ -50,11 +16,17 @@ const Post = ({ pageContext }) => {
     <Layout>
       <Seo />
 
-      <Text py={2}>{product.frontmatter.date}</Text>
-      <Heading as={"h1"} pb={4} size="xl">
-        {product.frontmatter.title}
-      </Heading>
-      <Properties product={product}></Properties>
+      <Box mb={8}>
+        <Text>{product.frontmatter.date}</Text>
+        <Heading as={"h1"} py={2} size="xl">
+          {product.frontmatter.title}
+        </Heading>
+        <Box>
+          {product.frontmatter.tags.map((tag) => {
+            return <Tag>{tag}</Tag>;
+          })}
+        </Box>
+      </Box>
 
       <MDXProvider
         components={{
