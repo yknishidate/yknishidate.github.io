@@ -9,6 +9,7 @@ import {
   Tbody,
   Tr,
   Td,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -75,7 +76,7 @@ const TrWithIcon = ({ children, icon }) => {
   );
 };
 
-const TrWithYear = ({ children, date }) => {
+const TrWithDate = ({ children, date }) => {
   return (
     <Tr>
       <TdLeft>{date}</TdLeft>
@@ -109,12 +110,17 @@ const IndexPage = () => {
     `
   );
   const mdxs = data.allMdx.nodes;
+  const [isLargerThan500] = useMediaQuery("(min-width: 500px)");
 
   return (
     <Layout>
       <Seo />
       <Box>
-        <Title>西舘 祐樹 | Yuki Nishidate</Title>
+        <Title>
+          西舘 祐樹
+          {isLargerThan500 ? " | " : <br />}
+          Yuki Nishidate
+        </Title>
 
         <Text px={0} py={2}>
           コンピュータグラフィックスを勉強しています
@@ -123,15 +129,12 @@ const IndexPage = () => {
         <Table variant={"unstyled"} placement="bottom">
           <Tbody>
             <TrWithIcon icon={faBuildingColumns}>
-              慶應義塾大学大学院理工学研究科 修士課程1年
+              慶應義塾大学大学院理工学研究科修士1年
             </TrWithIcon>
-
             <TrWithIcon icon={faBriefcase}>
               R&Dエンジニア @ DIGITAL FRONTIER INC. (2019-2021)
             </TrWithIcon>
-
             <TrWithIcon icon={faBriefcase}>3Dデザイナー (2018)</TrWithIcon>
-
             <TrWithIcon icon={faLink}>
               <ExternalLink href="https://twitter.com/yknishidate">
                 Twitter
@@ -151,16 +154,16 @@ const IndexPage = () => {
         <SectionTitle>研究発表</SectionTitle>
         <Table variant={"unstyled"}>
           <Tbody>
-            <TrWithYear date={"2022/03"}>
+            <TrWithDate date={"2022/03"}>
               {
                 "西舘 祐樹, 藤代 一成, 「高速プライマリレイ走査のためのアフィン変換レイアライメント」, 情報処理学会 第84回全国大会, "
               }
               <ExternalLink href="https://www.ipsj.or.jp/award/taikaigakusei.html#:~:text=%E8%A5%BF%E8%88%98%E3%80%80%E7%A5%90%E6%A8%B9%E5%90%9B%EF%BC%88%E6%85%B6%E6%87%89%E7%BE%A9%E5%A1%BE%E5%A4%A7%E5%AD%A6%EF%BC%89">
                 学生奨励賞
               </ExternalLink>
-            </TrWithYear>
+            </TrWithDate>
 
-            <TrWithYear date={"2022/03"}>
+            <TrWithDate date={"2022/03"}>
               {
                 "西舘 祐樹, 藤代 一成, 「プライマリレイ走査高速化のためのアフィン変換レイアライメント―Embreeを用いた実装―」, 第185回 CGVI研究発表会, "
               }
@@ -171,22 +174,22 @@ const IndexPage = () => {
               <ExternalLink href="https://cgvi.jp/info/%e5%ad%a6%e7%94%9f%e7%99%ba%e8%a1%a8%e8%b3%9e/#185#:~:text=%E8%A5%BF%E8%88%98%20%E7%A5%90%E6%A8%B9">
                 学生発表賞
               </ExternalLink>
-            </TrWithYear>
+            </TrWithDate>
 
-            <TrWithYear date={"2022/10"}>
+            <TrWithDate date={"2022/10"}>
               {
                 "西舘 祐樹, 藤代 一成, 「レイ走査高速化のためのアフィン変換レイアライメント」, Visual Computing 2022, "
               }
               <ExternalLink href="https://cgvi.jp/info/%E5%AD%A6%E7%94%9F%E7%99%BA%E8%A1%A8%E8%B3%9E/#vc2022:~:text=%E5%A4%89%E6%8F%9B%E3%83%AC%E3%82%A4%E3%82%A2%E3%83%A9%E3%82%A4%E3%83%A1%E3%83%B3%E3%83%88%0A%E2%97%8B-,%E8%A5%BF%E8%88%98%20%E7%A5%90%E6%A8%B9,-%EF%BC%88%E6%85%B6%E6%87%89%E7%BE%A9">
                 学生発表賞
               </ExternalLink>
-            </TrWithYear>
+            </TrWithDate>
 
-            <TrWithYear date={"2022/12"}>
+            <TrWithDate date={"2022/12"}>
               {
                 'Yuki Nishidate, Issei Fujishiro, "Affine-Transformed Ray Alignment for Fast Ray Traversal," SIGGRAPH Asia 2022, Technical Communications'
               }
-            </TrWithYear>
+            </TrWithDate>
           </Tbody>
         </Table>
       </Box>
@@ -195,21 +198,21 @@ const IndexPage = () => {
         <SectionTitle>イベント発表</SectionTitle>
         <Table variant={"unstyled"}>
           <Tbody>
-            <TrWithYear date={"2022/03"}>
+            <TrWithDate date={"2022/03"}>
               <ExternalLink href="https://connpass.com/event/237956/">
                 {"バンダイナムコ研究所データサイエンスチャレンジ振り返り会"}
               </ExternalLink>
               <br />
               {"優勝解法解説"}
-            </TrWithYear>
+            </TrWithDate>
 
-            <TrWithYear date={"2022/09"}>
+            <TrWithDate date={"2022/09"}>
               <ExternalLink href="https://www.khronos.org/events/japan-vulkan-meetup-september-9-2022">
                 {"Japan Vulkan Meetup"}
               </ExternalLink>
               <br />
               {'Speaker of "Vulkan from a Student / Researcher\'s Perspective"'}
-            </TrWithYear>
+            </TrWithDate>
           </Tbody>
         </Table>
       </Box>
@@ -218,34 +221,34 @@ const IndexPage = () => {
         <SectionTitle>資格・受賞など</SectionTitle>
         <Table variant={"unstyled"} placement="bottom">
           <Tbody>
-            <TrWithYear date={"2017/02"}>
-              DHU U-18アーティストコンテストCG部門優秀賞受賞
-            </TrWithYear>
+            <TrWithDate date={"2017/02"}>
+              DHU U-18アーティストコンテストCG部門優秀賞
+            </TrWithDate>
 
-            <TrWithYear date={"2017/04"}>基本情報技術者試験合格</TrWithYear>
+            <TrWithDate date={"2017/04"}>基本情報技術者試験</TrWithDate>
 
-            <TrWithYear date={"2018/12"}>
-              CGエンジニア検定エキスパート合格
-            </TrWithYear>
+            <TrWithDate date={"2018/12"}>
+              CGエンジニア検定エキスパート
+            </TrWithDate>
 
-            <TrWithYear date={"2018/12"}>
-              CGクリエイター検定エキスパート合格
-            </TrWithYear>
+            <TrWithDate date={"2018/12"}>
+              CGクリエイター検定エキスパート
+            </TrWithDate>
 
-            <TrWithYear date={"2019/02"}>
-              文部科学大臣賞受賞（CGエンジニア検定満点による）
-            </TrWithYear>
+            <TrWithDate date={"2019/02"}>
+              文部科学大臣賞（CGエンジニア検定満点による）
+            </TrWithDate>
 
-            <TrWithYear date={"2022/01"}>
+            <TrWithDate date={"2022/01"}>
               バンダイナムコ研究所データサイエンスチャレンジ優勝
-            </TrWithYear>
+            </TrWithDate>
 
-            <TrWithYear date={"2022/08"}>
+            <TrWithDate date={"2022/08"}>
               {"情報処理学会 "}
               <ExternalLink href="https://www.ipsj.or.jp/award/yamashita2022.html#:~:text=%E8%A5%BF%E8%88%98%E3%80%80%E7%A5%90%E6%A8%B9,%E3%81%84%E3%81%9F%E5%AE%9F%E8%A3%85%E2%80%94">
-                {"山下記念研究賞受賞"}
+                {"山下記念研究賞"}
               </ExternalLink>
-            </TrWithYear>
+            </TrWithDate>
           </Tbody>
         </Table>
       </Box>
