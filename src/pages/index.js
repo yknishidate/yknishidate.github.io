@@ -9,7 +9,6 @@ import {
   Tbody,
   Tr,
   Td,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -27,7 +26,7 @@ config.autoAddCss = false;
 
 const Title = ({ children }) => {
   return (
-    <Heading as={"h1"} size={"xl"} pt={8} pb={2} fontWeight={400}>
+    <Heading as={"h1"} size={"lg"} pt={8} pb={2} fontWeight={400}>
       {children}
     </Heading>
   );
@@ -35,7 +34,7 @@ const Title = ({ children }) => {
 
 const SectionTitle = ({ children }) => {
   return (
-    <Heading as={"h2"} size={"lg"} pt={4} pb={2} fontWeight={400}>
+    <Heading as={"h2"} size={"md"} pt={4} pb={2} fontWeight={400}>
       {children}
     </Heading>
   );
@@ -110,18 +109,12 @@ const IndexPage = () => {
     `
   );
   const mdxs = data.allMdx.nodes;
-  const [isLargerThan500] = useMediaQuery("(min-width: 500px)");
 
   return (
     <Layout>
       <Seo />
       <Box>
-        <Title>
-          西舘 祐樹
-          {isLargerThan500 ? " | " : <br />}
-          Yuki Nishidate
-        </Title>
-
+        <Title>西舘 祐樹 | Yuki Nishidate</Title>
         <Text px={0} py={2}>
           コンピュータグラフィックスを勉強しています
         </Text>

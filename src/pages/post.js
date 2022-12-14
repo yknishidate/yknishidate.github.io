@@ -18,7 +18,7 @@ const Post = ({ pageContext }) => {
 
       <Box mb={8}>
         <Text>{product.frontmatter.date}</Text>
-        <Heading as={"h1"} py={2} size="xl" fontWeight={400}>
+        <Heading as={"h1"} py={2} size="lg" fontWeight={400}>
           {product.frontmatter.title}
         </Heading>
         <Box>
@@ -36,7 +36,7 @@ const Post = ({ pageContext }) => {
               as={"h1"}
               pt={8}
               pb={2}
-              size="xl"
+              size="lg"
               fontWeight={400}
             />
           ),
@@ -46,7 +46,7 @@ const Post = ({ pageContext }) => {
               as={"h2"}
               pt={6}
               pb={2}
-              size="lg"
+              size="md"
               fontWeight={400}
             />
           ),
