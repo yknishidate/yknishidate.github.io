@@ -114,7 +114,7 @@ const IndexPage = () => {
     <Layout>
       <Seo />
       <Box>
-        <Title>西舘 祐樹 // Yuki Nishidate</Title>
+        <Title>西舘 祐樹 | Yuki Nishidate</Title>
 
         <Text px={0} py={2}>
           コンピュータグラフィックスを勉強しています

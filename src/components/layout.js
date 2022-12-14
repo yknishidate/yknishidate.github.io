@@ -14,8 +14,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: "M PLUS 1",
-    body: "M PLUS 1",
+    heading: `'M PLUS 1', sans-serif`,
+    body: `'M PLUS 1', sans-serif`,
   },
   colors: {
     background: "#191919",
