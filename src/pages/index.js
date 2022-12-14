@@ -139,7 +139,7 @@ const IndexPage = () => {
               {" (2021-)"}
             </TrWithIcon>
             <TrWithIcon icon={faBriefcase}>
-              {"R&Dエンジニア @ "}
+              {"R&Dエンジニア for "}
               <ExternalLink href="https://www.dfx.co.jp/">
                 DIGITAL FRONTIER INC.
               </ExternalLink>
