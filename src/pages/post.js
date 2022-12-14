@@ -18,7 +18,7 @@ const Post = ({ pageContext }) => {
 
       <Box mb={8}>
         <Text>{product.frontmatter.date}</Text>
-        <Heading as={"h1"} py={2} size="lg">
+        <Heading as={"h1"} py={2} size="lg" fontWeight={"normal"}>
           {product.frontmatter.title}
         </Heading>
         <Box>
@@ -31,13 +31,34 @@ const Post = ({ pageContext }) => {
       <MDXProvider
         components={{
           h1: (props) => (
-            <Heading {...props} as={"h1"} pt={8} pb={2} size="lg" />
+            <Heading
+              {...props}
+              as={"h1"}
+              pt={8}
+              pb={2}
+              size="lg"
+              fontWeight={"normal"}
+            />
           ),
           h2: (props) => (
-            <Heading {...props} as={"h2"} pt={6} pb={2} size="md" />
+            <Heading
+              {...props}
+              as={"h2"}
+              pt={6}
+              pb={2}
+              size="md"
+              fontWeight={"normal"}
+            />
           ),
           h3: (props) => (
-            <Heading {...props} as={"h3"} pt={4} pb={2} size="md" />
+            <Heading
+              {...props}
+              as={"h3"}
+              pt={4}
+              pb={2}
+              size="md"
+              fontWeight={"normal"}
+            />
           ),
           p: (props) => <Text {...props} py={1} />,
           pre: (props) => (
