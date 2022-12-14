@@ -14,8 +14,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `'M PLUS 1', sans-serif`,
-    body: `'M PLUS 1', sans-serif`,
+    heading: `'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif`,
+    body: `'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif`,
   },
   colors: {
     background: "#191919",

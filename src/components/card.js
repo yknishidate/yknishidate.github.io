@@ -36,7 +36,7 @@ const Card = ({ product }) => {
           />
           <Container p={2}>
             <Text>{date}</Text>
-            <Heading as={"h3"} size={"md"} fontWeight={400}>
+            <Heading as={"h3"} size={"md"}>
               {title}
             </Heading>
             <Box py={1}>

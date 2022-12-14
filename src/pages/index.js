@@ -26,7 +26,7 @@ config.autoAddCss = false;
 
 const Title = ({ children }) => {
   return (
-    <Heading as={"h1"} size={"lg"} pt={8} pb={2} fontWeight={400}>
+    <Heading as={"h1"} size={"lg"} pt={8} pb={2}>
       {children}
     </Heading>
   );
@@ -34,7 +34,7 @@ const Title = ({ children }) => {
 
 const SectionTitle = ({ children }) => {
   return (
-    <Heading as={"h2"} size={"md"} pt={4} pb={2} fontWeight={400}>
+    <Heading as={"h2"} size={"md"} pt={4} pb={2}>
       {children}
     </Heading>
   );
