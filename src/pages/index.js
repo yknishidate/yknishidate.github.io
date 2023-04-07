@@ -122,7 +122,7 @@ const IndexPage = () => {
         <Table variant={"unstyled"} placement="bottom">
           <Tbody>
             <TrWithIcon icon={faBuildingColumns}>
-              慶應義塾大学大学院理工学研究科修士1年
+              慶應義塾大学 大学院理工学研究科 修士2年
             </TrWithIcon>
             <TrWithIcon icon={faBriefcase}>
               {"Consultant (independent) for "}
